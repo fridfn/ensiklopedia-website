@@ -5,7 +5,7 @@ const List = () => {
     <div className="list">
      <div className="wrapper">
        <div className="box-image">
-         <img className="icon-image" src="/dinosaurus.jpg"/>
+         <img className="icon-image" src="./dinosaurus.jpg"/>
        </div>
        <p className="name-list small">Dinoraurus</p>
       </div>
