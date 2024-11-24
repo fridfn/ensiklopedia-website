@@ -2,11 +2,11 @@
 
 const List = () => {
   return (
-    <div class="list">
-      <div class="box-image">
-        <img class="icon-image" src="/assets/dino.jpg"/>
+    <div className="list">
+      <div className="box-image">
+        <img className="icon-image" src="/assets/dino.jpg"/>
       </div>
-      <p class="name-list">Dinoraurus</p>
+      <p className="name-list">Dinoraurus</p>
     </div>
    );
 };

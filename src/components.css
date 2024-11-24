@@ -6,10 +6,6 @@
  --primary-border: #d2d2ff;
 }
 
-* {
- color: var(--primary-text);
-}
-
 .header {
  position: fixed;
  top: 0;
