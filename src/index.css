@@ -19,9 +19,6 @@
  box-sizing: border-box;
 }
 
-.container {
-}
-
 .container section {
  gap: 30px;
  display: flex;
