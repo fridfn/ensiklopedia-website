@@ -12,6 +12,7 @@ function App() {
       <List />
       <List />
       <List />
+      <List />
      </section>
     </div>
   )
