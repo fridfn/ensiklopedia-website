@@ -1,4 +1,4 @@
-//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
+//
 import iconWeb from '/src/assets/dinosaurus.jpg'
 
 const Header = () => {
