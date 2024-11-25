@@ -1,10 +1,11 @@
-
+//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
+import iconWeb from '/src/assets/dinosaurus.jpg'
 
 const Header = () => {
   return (
    <div className="header">
      <div className="wrapper">
-       <img width="34" src="./src/assets/dino.svg"/>
+       <img width="34" src={iconWeb}/>
        <p className="title-heading">Ensiklopedia</p>
      </div>
      <div className="wrapper">

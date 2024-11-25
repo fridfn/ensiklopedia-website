@@ -49,6 +49,15 @@
  font-weight: 500;
 }
 
+.width-full {
+ width: 100%;
+}
+
+.cta {
+ margin-left: auto;
+ height: 100%;
+}
+
 .center-clm {
  display: flex;
  align-items: center;
@@ -60,4 +69,20 @@
  display: flex;
  align-items: center;
  justify-content: center;
+}
+
+.wrapping {
+ overflow: hidden;
+}
+
+.marquee {
+ animation: marquee 8s infinite linear;
+}
+
+@keyframes marquee {
+  from {
+   transform: translateY(110%);
+  } to {
+   transform: translateY(-150%);
+ }
 }
