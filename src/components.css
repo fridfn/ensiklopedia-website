@@ -1,9 +1,9 @@
 :root {
- --primary-bg: #00171F;
+ --primary-bg: #161105;
  --primary-text: #ffffffde;
- --primary-icon: #fff7d2;
- --primary-cards: #b39a53;
- --secondary-cards: #7a5d16;
+ --primary-icon: #fff4a7;
+ --primary-cards: #100e02;
+ --secondary-cards: #161105;
  --primary-border: #fffcd2;
  --primary-hover: #494624;
 }
@@ -96,4 +96,46 @@
 .list .descriptions-box .description {
  height: 65px;
  padding: 5px 0;
+}
+
+.navbar {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 40px;
+ display: flex;
+ font-weight: 500;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+ background-color: var(--primary-cards);
+ border-top: 3px solid var(--primary-border);
+}
+
+.navbar .wrapper {
+ width: 100%;
+ justify-content: space-between;
+}
+
+.navbar .wrapper .items:hover .icon {
+ background-color: var(--primary-cards);
+}
+
+.navbar .wrapper .items .title {
+ opacity: 1;
+ z-index: -1;
+ padding: 4px 15px;
+ position: relative;
+ border-radius: 5px 15px 5px;
+ transition: all .3s ease-in-out;
+ transform: translateY(-20px);
+ background-color: var(--primary-cards);
+ border: 2px solid var(--primary-border);
+}
+
+.navbar .wrapper .items:hover .title {
+ opacity: 1;
+ z-index: 1;
+ transform: translateY(-15px);
 }

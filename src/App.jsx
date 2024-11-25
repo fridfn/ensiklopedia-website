@@ -3,6 +3,7 @@ import './App.css'
 import './components.css'
 import Header from './components/header.jsx'
 import List from './components/list.jsx'
+import Navbar from './components/navbar.jsx'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <List />
       <List />
      </section>
+      <Navbar />
     </div>
   )
 }

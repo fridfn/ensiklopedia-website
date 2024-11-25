@@ -3,8 +3,7 @@
   font-weight: 400;
   
   color-scheme: light dark;
-  color: var(--primary-text);
-  background-color: #00171F;
+  background-color: #100e02;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -48,4 +47,17 @@
 
 .big, .small, .litle {
  font-weight: 500;
+}
+
+.center-clm {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.center-flx {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
