@@ -1,4 +1,3 @@
-//
 import iconWeb from '/src/assets/dinosaurus.jpg'
 
 const Header = () => {
