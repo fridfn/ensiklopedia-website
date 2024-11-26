@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from 'react'
+
 import './App.css'
 import './components.css'
 import Header from './components/header.jsx'
@@ -12,7 +13,7 @@ function App() {
   useEffect(() => {
    setTimeout(() => {
     setLoading(false)
-   }, 20000);
+   }, 20);
   }, []);
   
   return (
