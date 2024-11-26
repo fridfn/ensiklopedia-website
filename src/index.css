@@ -33,6 +33,10 @@
  animation: like_effect 600ms ease;
 }
 
+.name-list {
+ z-index: 10;
+}
+
 .big {
  font-size: 23px;
 }

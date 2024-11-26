@@ -1,9 +1,11 @@
-
+import React, { useEffect, useState } from 'react';
 
 const List = () => {
+  const [dinosaurus, setDinosaurus] = useState([]);
+  
   return (
     <div className="list">
-     <div className="wrapper width-full">
+     <div className="wrapper width-full" id="background-list">
        <div className="box-image">
          <img className="icon-image" src="./dinosaurus.jpg"/>
        </div>
