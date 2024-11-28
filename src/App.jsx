@@ -1,40 +1,26 @@
-import react, { useState, useEffect } from 'react'
+import '@/styles/components.css'
+import React, { useState, useEffect, Suspense } from 'react'
+import { Router, Link } from '@reach/router';
+import RouteTemplate from '@/routes/routesTemplate';
+import MainPage from '@/pages/main/MainPage';
+import TriassicPage from '@/pages/prehistoric/triassic/TriassicPage';
+import JurassicPage from '@/pages/prehistoric/jurassic/JurassicPage';
+import CretaceusPage from '@/pages/prehistoric/cretaceus/CretaceusPage.jsx';
+import { FallbackRoute } from '@/routes/routeConfig';
 
-import './App.css'
-import './components.css'
-import Header from './components/header.jsx'
-import List from './components/list.jsx'
-import Navbar from './components/navbar.jsx'
-import Loading from './components/loading.jsx'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  
-  useEffect(() => {
-   setTimeout(() => {
-    setLoading(false)
-   }, 15000);
-  }, []);
-  
   return (
-   <>
-    <div className="container">
-     {loading ? (
-       <Loading />
-     ) : (
-       <>
-         <Header />
-         <section>
-           <List />
-           <List />
-           <List />
-           <List />
-         </section>
-         <Navbar />
-       </>
-     )}
+   <div>
+   
+    <Router>
+    <MainPage path="/" />
+    <TriassicPage path="/triassic" />
+    <JurassicPage path="/jurassic" />
+    <CretaceusPage path="/cretaceus" />
+    <FallbackRoute default />
+  </Router>
    </div>
-  </>
   )
 }
 

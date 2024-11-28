@@ -6,7 +6,7 @@
 /*  --primary-border: #019300;  */
  --primary-border: #fffcd2;
  --primary-hover: #494624;
- --secondary-text: #856100;
+ --secondary-text: #7f600b;
  --secondary-cards: #2a1f00;
  --secondary-hover: #2a1f00;
 }
@@ -132,45 +132,42 @@
 
 .navbar {
  position: fixed;
- bottom: 0;
  left: 0;
+ bottom: 0;
  z-index: 20;
  width: 100%;
- height: 40px;
  display: flex;
  font-weight: 500;
  align-items: center;
  flex-direction: column;
  justify-content: center;
- background-color: var(--primary-cards);
+ border-radius: 5px 5px 0 0;
+ padding: 15px 10px 10px 10px;
+ background-color: var(--secondary-cards);
  border-top: 3px solid var(--primary-border);
+ box-shadow: inset 2px 5px 5px 5px var(--primary-bg);
 }
 
 .navbar .wrapper {
  width: 100%;
- position: relative;
- transform: translateY(-20px);
  justify-content: space-between;
+}
+
+.navbar .wrapper .items {
+ padding: 7px 15px;
+ border-radius: 5px 15px 5px;
+ transition: all .3s ease-in-out;
+ background-color: var(--secondary-cards);
+ box-shadow: inset 1px -1px 7px 1px var(--primary-bg);
 }
 
 .navbar .wrapper .items:hover .icon {
  background-color: var(--primary-cards);
 }
 
-.navbar .wrapper .items .title {
- opacity: 1;
- z-index: -1;
- padding: 4px 15px;
- border-radius: 5px 15px 5px;
- transition: all .3s ease-in-out;
- background-color: var(--primary-cards);
- border: 2px solid var(--primary-border);
-}
-
-.navbar .wrapper .items:hover .title {
- opacity: 1;
- z-index: 1;
- color: var(--secondary-text);
+.navbar .wrapper .items:hover {
  transform: translateY(5px);
+ color: var(--secondary-text);
  border-color: var(--secondary-hover);
+ box-shadow: inset 3px 3px 7px 3px var(--primary-bg);
 }

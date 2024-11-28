@@ -11,10 +11,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+ z-index: 8888;
+ position: fixed;
+ top: 0;
+}
+
 * {
- padding: 0;
  margin: 0;
+ padding: 0;
+ cursor: none;
+ color: #ffffffde;
  user-select: none;
+ text-decoration: none;
  box-sizing: border-box;
 }
 
@@ -26,18 +35,13 @@
 }
 
 :root {
- padding: 70px 10px;
+ padding: 90px 10px;
 }
 
 #bookmark {
  padding: 5px;
  border-radius: 0 0 0 5px;
- background-color: var(--primary-cards);
 }
-
-/* #bookmark:hover {
- animation: like_effect 600ms ease;
-} */
 
 .name-list {
  z-index: 10;
@@ -72,9 +76,9 @@
 }
 
 .cta {
+ height: 100%;
  margin-left: auto;
  margin-bottom: auto;
- height: 100%;
 }
 
 .wrapper-flex {

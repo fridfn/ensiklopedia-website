@@ -1,5 +1,5 @@
 
-import mainIcon from '/src/assets/dinosaurus.jpg'
+import mainIcon from '@/assets/dinosaurus.jpg'
 
 const Loading = () => {
   return (

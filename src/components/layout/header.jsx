@@ -1,4 +1,4 @@
-import iconWeb from '/src/assets/dinosaurus.jpg'
+import iconWeb from '@/assets/dinosaurus.jpg'
 
 const Header = () => {
   return (

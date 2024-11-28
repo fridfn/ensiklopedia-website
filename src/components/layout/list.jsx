@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import iconDino from '/src/assets/dino.svg';
+import iconDino from '@/assets/dino.svg';
 
 const List = () => {
   const [dinosaurus, setDinosaurus] = useState([]);
@@ -18,7 +18,7 @@ const List = () => {
       <div className="descriptions-box">
         <p className="title litle">Zaman Neolitikum</p>
         <div className="wrapping" style={{boxShadow: 'inset 0px 3px 5px 4px var(--primary-cards)', borderRadius: '5px'}}>
-         <p className="description tiny marquee">commodo id in officia adipisicing nostrud et ad qui elit excepteur magna in mollit eiusmod Lorem ad qui nisi nulla ut aute exercitation proident incididunt anim aliquip aliquip sunt anim Lorem exercitation eu laboris ea commodo do ex officia excepteur</p>
+         <p className="description tiny-bold marquee">commodo id in officia adipisicing nostrud et ad qui elit excepteur magna in mollit eiusmod Lorem ad qui nisi nulla ut aute exercitation proident incididunt anim aliquip aliquip sunt anim Lorem exercitation eu laboris ea commodo do ex officia excepteur</p>
         </div>
       </div>
       <div className="wrapper-flex" style={{width: '100%'}}>
