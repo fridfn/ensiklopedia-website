@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { routes, FallbackRoute } from './routeConfig';
 
 const RouteTemplate = () => {
