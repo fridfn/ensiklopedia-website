@@ -1,9 +1,13 @@
+import '@/global.css';
+import '@/styles/components.css';
+import Navbar from '@/components/layout/navbar';
+
 
 const TriassicPage = () => {
- console.log('triassicnterender')
   return (
     <>
       <h1>Hello triassic</h1>
+      <Navbar />
     </>
   )
 }

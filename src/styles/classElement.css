@@ -1,0 +1,13 @@
+.container-popup {
+ position: relative;
+ overflow-x: hidden;
+}
+
+.box-popup {
+ position: absolute;
+ border: 2px solid transparent;
+ width: 180px;
+ height: auto;
+ right: -10px;
+ bottom: 50px;
+}

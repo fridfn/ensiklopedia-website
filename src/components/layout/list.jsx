@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import '@/global.css';
+import '@/styles/active.css';
 import iconDino from '@/assets/dino.svg';
+import scratch from '@/assets/icon/scratch.svg';
+import ModalPopup from '@/components/widget/modalPopup';
+import withToggleActive from '@/features/utils/withToggleActive';
 
-const List = () => {
-  const [dinosaurus, setDinosaurus] = useState([]);
-  
+const List = ({ isActive, toggleActive }) => {
   return (
     <div className="list">
      <div className="wrapper width-full" id="background-list">
@@ -26,10 +29,15 @@ const List = () => {
          <button className="button tiny-bold">PELAJARI</button>
          <ion-icon class="icon small" id="paw" name="paw"></ion-icon>
         </div>
-         <ion-icon class="icon big" id="paw" name="information"></ion-icon>
+        <div className={`container-popup wrapper-flex ${isActive ? 'active' : ''}`}>
+         <ModalPopup />
+         <button className="buttons" onClick={toggleActive}>
+           <ion-icon class="icon big" id="paw" name="information"></ion-icon>
+         </button>
+        </div>
       </div>
     </div>
    );
 };
 
-export default List;
+export default withToggleActive(List);

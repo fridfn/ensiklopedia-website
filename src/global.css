@@ -21,10 +21,14 @@ h1 {
  margin: 0;
  padding: 0;
  cursor: none;
- color: #ffffffde;
  user-select: none;
  text-decoration: none;
  box-sizing: border-box;
+}
+
+button {
+ border: 0px solid transparent;
+ background-color: transparent;
 }
 
 .container section {
@@ -34,6 +38,24 @@ h1 {
  justify-content: space-between;
 }
 
+.blur-background {
+ left: -100%;
+ z-index: 25;
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ backdrop-filter: blur(7px);
+}
+
+.blur-background.active {
+ left: 0px;
+ top: 0px;
+}
+
+.blur-background.active body {
+ overflow: hidden;
+}
+
 :root {
  padding: 90px 10px;
 }
@@ -41,6 +63,9 @@ h1 {
 #bookmark {
  padding: 5px;
  border-radius: 0 0 0 5px;
+}
+
+#popup {
 }
 
 .name-list {
@@ -60,7 +85,7 @@ h1 {
 }
 
 .tiny {
- font-size: 12.5px;
+ font-size: 12px;
 }
 
 .tiny-bold {
@@ -73,6 +98,13 @@ h1 {
 
 .width-full {
  width: 100%;
+}
+
+.items {
+ display: flex;
+ position: relative;
+ align-items: center;
+ justify-content: center;
 }
 
 .cta {
@@ -88,8 +120,8 @@ h1 {
 }
 
 .wrapper-column {
- display: flex;
  gap: 10px;
+ display: flex;
  align-items: center;
  flex-direction: column;
  justify-content: center;
@@ -124,7 +156,7 @@ h1 {
  }
 }
 
-@keyframes like_effect {
+@keyframes scale_effect {
   0% {
     transform: scale(0);
   }
@@ -136,6 +168,10 @@ h1 {
   100% {
     transform: scale(1);
   }
+}
+
+.scale-effect {
+ animation: scale_effect 300ms 2;
 }
 
 .loading-spinner {

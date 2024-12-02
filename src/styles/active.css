@@ -1,0 +1,6 @@
+.container-popup.active {
+ opacity: 1;
+ overflow-x: visible;
+ transition: overflow-x 50ms linear;
+ transition: opacity 300ms linear;
+}

@@ -1,7 +1,21 @@
-
 import mainIcon from '@/assets/dinosaurus.jpg'
+import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
 
-const Loading = () => {
+
+
+const LoadingPage = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+   const timer = setTimeout(() => {
+    setLoading(false);
+    navigate('/home');
+   }, 5000);
+   
+   return () => clearTimeout(timer);
+  }, [navigate]);
+  
   return (
    <div className="loading-spinner">
    <div className="wrapper-column">
@@ -20,4 +34,4 @@ const Loading = () => {
   )
 }
 
-export default Loading;
+export default LoadingPage;
