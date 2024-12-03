@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '@/global.css';
+import '@/styles/App.scss';
 import '@/styles/Active.scss';
 import iconDino from '@/assets/dino.svg';
 import scratch from '@/assets/icon/scratch.svg';
@@ -20,7 +21,7 @@ const List = ({ isActive, toggleActive, dinosaurus, deskripsi, periode, lokasi }
       </div>
       <div className="descriptions-box">
         <p className="title litle">Zaman {periode}</p>
-        <div className="wrapping" style={{boxShadow: 'inset 0px 3px 5px 4px var(--primary-cards)', borderRadius: '5px'}}>
+        <div className="wrapping" style={{boxShadow: 'inset 0px 3px 5px 4px $primary-cards', borderRadius: '5px'}}>
          <p className="description tiny-bold marquee">{deskripsi}</p>
         </div>
       </div>

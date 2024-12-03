@@ -109,6 +109,10 @@
  border-top: 2px solid $primary-border;
 }
 
+.list .descriptions-box .wrapping {
+ box-shadow: inset 2px 3px 6px 5px $primary-bg;
+}
+
 #background-list:before {
  inset: 0;
  content: '';
