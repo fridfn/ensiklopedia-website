@@ -1,0 +1,126 @@
+{
+  "dinosaurs": [
+    {
+      "nama": "Tyrannosaurus Rex",
+      "periode": "Cretaceus",
+      "makanan": "Karnivora",
+      "panjang": "12.3 meter",
+      "berat": "9 ton",
+      "tinggi": "3.66 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "68 hingga 66 juta tahun yang lalu",
+      "penemu": "Barnum Brown, 1902",
+      "fosil_ditemukan_di": "Montana, Amerika Serikat",
+      "deskripsi": "Tyrannosaurus Rex adalah dinosaurus karnivora yang sangat kuat dengan rahang yang kuat dan tubuh berotot. Meski memiliki tangan kecil, T. rex adalah predator puncak dengan gigi yang tajam dan rahang yang sangat kuat.",
+      "ciri_khusus": [
+        "Tengkorak besar dengan gigi tajam.",
+        "Lengan kecil dengan dua jari.",
+        "Ekor kuat untuk menjaga keseimbangan."
+      ],
+      "habitat": "Hutan, lembah sungai",
+      "predator": "Tidak ada (predator puncak)",
+      "mangsa": "Dinosaurus herbivora seperti Triceratops dan Edmontosaurus.",
+      "teknik_berburu": "Mengintai mangsa sebelum menyerang dengan gigitan kuat yang dapat menghancurkan tulang.",
+      "kecepatan_lari": "27 hingga 40 km/jam",
+      "usia_terpanjang": "30 tahun",
+      "teknik_pertahanan": "Menggunakan rahang besar dan ekor untuk menyerang balik."
+    },
+    {
+      "nama": "Triceratops",
+      "periode": "Cretaceus",
+      "makanan": "Herbivora",
+      "panjang": "9 meter",
+      "berat": "6 hingga 12 ton",
+      "tinggi": "3 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "68 hingga 66 juta tahun yang lalu",
+      "penemu": "Othniel Charles Marsh, 1889",
+      "fosil_ditemukan_di": "Wyoming, Montana, Amerika Serikat",
+      "deskripsi": "Triceratops adalah dinosaurus herbivora besar dengan tiga tanduk di wajah dan frill besar di bagian belakang kepalanya. Dinosaurus ini mungkin menggunakan tanduknya untuk melindungi diri dari predator seperti T. rex.",
+      "ciri_khusus": [
+        "Tiga tanduk di wajah dan frill tulang besar.",
+        "Rahangs kuat dengan ratusan gigi untuk menggiling tanaman.",
+        "Berdiri dengan empat kaki besar."
+      ],
+      "habitat": "Dataran, hutan terbuka",
+      "predator": "Tyrannosaurus Rex",
+      "diet_detail": "Paku, pakis, sikas, dan tumbuhan lain dari zaman prasejarah.",
+      "teknik_pertahanan": "Menggunakan tanduk dan frill besar untuk menghalangi dan menyerang predator.",
+      "kecepatan_lari": "20 km/jam",
+      "usia_terpanjang": "30 tahun"
+    },
+    {
+      "nama": "Velociraptor",
+      "periode": "Cretaceus",
+      "makanan": "Karnivora",
+      "panjang": "2 meter",
+      "berat": "15 hingga 20 kg",
+      "tinggi": "0.5 meter",
+      "lokasi_fosil": "Mongolia",
+      "hidup": "75 hingga 71 juta tahun yang lalu",
+      "penemu": "Henry Fairfield Osborn, 1924",
+      "fosil_ditemukan_di": "Gurun Gobi, Mongolia",
+      "deskripsi": "Velociraptor adalah predator kecil dan cepat dengan tubuh berbulu dan cakar tajam. Dinosaurus ini dikenal karena kecepatannya, kecerdasannya, dan cakar besar berbentuk sabit di kaki belakangnya yang digunakan untuk menyerang mangsa.",
+      "ciri_khusus": [
+        "Cakar berbentuk sabit di kaki belakang.",
+        "Tubuh berbulu, mirip burung.",
+        "Ekor panjang untuk keseimbangan saat berlari."
+      ],
+      "habitat": "Daerah gurun dan semi-arid",
+      "predator": "Dinosaurus karnivora yang lebih besar.",
+      "mangsa": "Hewan kecil, seperti mamalia dan reptil kecil.",
+      "teknik_berburu": "Menyerang dalam kelompok kecil, mengandalkan kecerdasan dan kecepatan untuk mengepung mangsa.",
+      "kecepatan_lari": "40 hingga 60 km/jam",
+      "usia_terpanjang": "15 hingga 20 tahun",
+      "teknik_pertahanan": "Menggunakan kecerdasan dan kecepatan untuk menghindari predator yang lebih besar."
+    },
+    {
+      "nama": "Brachiosaurus",
+      "periode": "Jurassic",
+      "makanan": "Herbivora",
+      "panjang": "26 meter",
+      "berat": "56 ton",
+      "tinggi": "12 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "154 hingga 150 juta tahun yang lalu",
+      "penemu": "Elmer S. Riggs, 1903",
+      "fosil_ditemukan_di": "Colorado, Amerika Serikat",
+      "deskripsi": "Brachiosaurus adalah dinosaurus herbivora yang sangat besar dengan leher panjang yang memungkinkannya memakan dedaunan dari pohon-pohon tinggi. Tubuhnya memiliki kaki depan yang lebih panjang dari kaki belakang, memberikan postur tubuh yang mirip dengan jerapah.",
+      "ciri_khusus": [
+        "Leher panjang untuk menjangkau dedaunan tinggi.",
+        "Kaki depan lebih panjang daripada kaki belakang.",
+        "Lubang hidung terletak di atas kepala."
+      ],
+      "habitat": "Hutan sub-tropis",
+      "predator": "Hampir tidak ada predator alami karena ukurannya yang besar.",
+      "diet_detail": "Konifer, pakis besar, dan pohon tinggi lainnya.",
+      "teknik_makan": "Memotong dedaunan tinggi dengan mulut berbentuk paruh.",
+      "kecepatan_berjalan": "10 hingga 20 km/jam",
+      "usia_terpanjang": "100 tahun"
+    },
+    {
+      "nama": "Stegosaurus",
+      "periode": "Jurassic",
+      "makanan": "Herbivora",
+      "panjang": "9 meter",
+      "berat": "5 hingga 7 ton",
+      "tinggi": "4 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "155 hingga 150 juta tahun yang lalu",
+      "penemu": "Othniel Charles Marsh, 1877",
+      "fosil_ditemukan_di": "Colorado, Wyoming, Amerika Serikat",
+      "deskripsi": "Stegosaurus adalah dinosaurus herbivora besar dengan piring tulang di punggungnya dan ekor yang dilengkapi duri, yang disebut thagomizer. Piring ini mungkin berfungsi sebagai alat pertahanan atau regulasi suhu.",
+      "ciri_khusus": [
+        "Piring tulang besar di sepanjang punggung.",
+        "Ekor berduri (thagomizer) digunakan untuk pertahanan.",
+        "Kepala kecil dengan mulut yang mirip paruh."
+      ],
+      "habitat": "Dataran rendah dan hutan terbuka.",
+      "predator": "Allosaurus dan karnivora besar lainnya.",
+      "diet_detail": "Tumbuhan rendah seperti pakis, lumut, dan tanaman kecil.",
+      "teknik_pertahanan": "Menggunakan ekor berduri (thagomizer) untuk menakut-nakuti atau menyerang predator.",
+      "kecepatan_lari": "5 hingga 7 km/jam",
+      "usia_terpanjang": "25 hingga 30 tahun"
+    }
+  ]
+}

@@ -1,42 +1,30 @@
-:root {
- --primary-bg: #161105;
- --primary-text: #b7f98bde;
- --primary-icon: #54ff53;
- --primary-cards: #100e02;
- --primary-border: #019300;
- /*--primary-border: #d8d49b;*/
- --primary-hover: #494624;
- --secondary-text: #7f600b;
- --secondary-cards: #2a1f00;
- --secondary-hover: #2a1f00;
- --secondary-icons: #ac9044;
-}
+@use './variable' as *;
 
 /*   global css with color && animation   */
 
 .sec-color-icon {
- color: var(--primary-icon);
- background-color: var(--primary-bg);
- box-shadow: inset 5px 5px 5px var(--primary-cards);
+ color: $primary-icon;
+ background-color: $primary-bg;
+ box-shadow: inset 5px 5px 5px $primary-cards;
 }
 
 .prim-color-icon {
- color: var(--primary-icon);
- background-color: var(--secondary-cards);
- box-shadow: inset 5px 5px 5px var(--primary-bg);
+ color: $primary-icon;
+ background-color: $secondary-cards;
+ box-shadow: inset 5px 5px 5px $primary-bg;
 }
 
  @keyframes scale_effect {
   0% {
-    transform: scale(0);
+    transform: scale(0) ;
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(1.2) ;
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1) ;
   }
 }
 
@@ -52,8 +40,8 @@
  padding: 10px 15px;
  align-items: center;
  justify-content: space-between;
- background-color: var(--primary-cards);
- border-bottom: 3px solid var(--primary-border);
+ background-color: $primary-cards;
+ border-bottom: 3px solid $primary-border;
 }
 
 .title-heading {
@@ -71,10 +59,10 @@
 .icon {
  padding: 5px;
  border-radius: 5px;
- color: var(--primary-icon);
+ color: $primary-icon;
  transition: all .3s ease-in;
- background-color: var(--secondary-cards);
- box-shadow: inset 2px 4px 3px var(--primary-bg);
+ background-color: $secondary-cards;
+ box-shadow: inset 2px 4px 3px $primary-bg;
 }
 
 .list {
@@ -87,9 +75,9 @@
  flex-direction: column;
  align-items: flex-start;
  transition: all .3s ease-in;
- border: 2px solid var(--primary-border);
- background-color: var(--primary-cards);
- box-shadow: 2px -2px 6px 2px var(--primary-cards);
+ border: 2px solid $primary-border;
+ background-color: $primary-cards;
+ box-shadow: 2px -2px 6px 2px $primary-cards;
 }
 
 .box-image {
@@ -98,7 +86,7 @@
  width: 65px;
  overflow: hidden;
  border-radius: 5px;
- border: 2px solid var(--primary-border);
+ border: 2px solid $primary-border;
 }
 
 .icon-image {
@@ -108,7 +96,7 @@
  height: 100%;
  padding: 5px;
  object-fit: cover;
- background-color: var(--primary-bg);
+ background-color: $primary-bg;
 }
 
 .list .descriptions-box {
@@ -117,8 +105,8 @@
  padding: 9px 9px;
  flex-direction: column;
  border-radius: 0 0 10px 10px;
- background-color: var(--secondary-hover);
- border-top: 2px solid var(--primary-border);
+ background-color: $secondary-hover;
+ border-top: 2px solid $primary-border;
 }
 
 #background-list:before {
@@ -140,8 +128,8 @@
  padding: 6px;
 }
 
-.list .descriptions-box .description::-webkit-scrollbar-thumb {
- background-color: var(--primary-border);
+.title {
+ color: $primary-text;
 }
 
 .button {
@@ -154,8 +142,8 @@
  gap: 5px;
  padding: 2px 5px;
  border-radius: 5px;
- background-color: var(--secondary-hover);
- box-shadow: inset 2px -2px 6px 2px var(--secondary-hover);
+ background-color: $secondary-hover;
+ box-shadow: inset 2px -2px 6px 2px $secondary-hover;
 }
 
 .navbar {
@@ -171,9 +159,9 @@
  justify-content: center;
  border-radius: 5px 5px 0 0;
  padding: 15px 10px 10px 10px;
- background-color: var(--secondary-cards);
- border-top: 3px solid var(--primary-border);
- box-shadow: inset 2px 5px 5px 5px var(--primary-cards);
+ background-color: $secondary-cards;
+ border-top: 3px solid $primary-border;
+ box-shadow: inset 2px 5px 5px 5px $primary-cards;
 }
 
 .navbar .wrapper {
@@ -185,19 +173,19 @@
  padding: 7px 15px;
  border-radius: 5px 15px 5px;
  transition: all .3s ease-in-out;
- background-color: var(--secondary-cards);
- box-shadow: inset 1px -1px 7px 1px var(--primary-bg);
+ background-color: $secondary-cards;
+ box-shadow: inset 1px -1px 7px 1px $primary-bg;
 }
 
 .navbar .wrapper .items:hover .icon {
- background-color: var(--primary-cards);
+ background-color: $primary-cards;
 }
 
 .navbar .wrapper .items:hover {
- transform: translateY(5px);
- color: var(--secondary-text);
- border-color: var(--secondary-hover);
- box-shadow: inset 3px 3px 7px 3px var(--primary-bg);
+ transform: translateY(5px) ;
+ color: $secondary-text;
+ border-color: $secondary-hover;
+ box-shadow: inset 3px 3px 7px 3px $primary-bg;
 }
 
 .sidebar {
@@ -211,7 +199,7 @@
  justify-content: start;
  padding: 15px 0 15px 15px;
  transition: all .3s linear;
- background-color: var(--primary-cards);
+ background-color: $primary-cards;
 }
 
 .sidebar.active {
@@ -224,11 +212,11 @@
  right: -20px;
  height: 40px;
  position: absolute;
- transform: rotate(135deg);
+ transform: rotate(135deg) ;
  border-radius: 15px 5px 10px 5px;
- background-color: var(--primary-cards);
- border-top: 2px solid var(--primary-border);
- border-left: 3px solid var(--primary-border);
+ background-color: $primary-cards;
+ border-top: 2px solid $primary-border;
+ border-left: 3px solid $primary-border;
 }
 
 .main-box-icon {
@@ -236,7 +224,7 @@
  width: 110px;
  height: 110px;
  overflow: hidden;
- box-shadow: inset 4px 5px 10px var(--primary-cards);
+ box-shadow: inset 4px 5px 10px $primary-cards;
 }
 
 .sidebar .section-items:before {
@@ -246,7 +234,7 @@
  width: 100%;
  height: 3px;
  position: absolute;
- background-color: var(--primary-border);
+ background-color: $primary-border;
 }
 
 .section-items {
@@ -265,8 +253,8 @@
  padding: 0px 5px 0px 10px;
  border-radius: 8px 0 0 8px;
  transition: all .3s ease-in-out;
- background-color: var(--secondary-cards);
- box-shadow: inset 2px 3px 7px 2px var(--primary-bg);
+ background-color: $secondary-cards;
+ box-shadow: inset 2px 3px 7px 2px $primary-bg;
 }
 
 .section-items .items:nth-child(1n+2):before {
@@ -276,32 +264,32 @@
  content: '';
  height: 15px;
  position: absolute;
- background-color: var(--secondary-cards);
- box-shadow: inset 2px 3px 6px 2px var(--primary-bg);
+ background-color: $secondary-cards;
+ box-shadow: inset 2px 3px 6px 2px $primary-bg;
 }
 
 .section-items .items:hover, .section-items:hover > :not(:hover) .text-info {
  gap: 20px;
- color: var(--primary-hover);
+ color: $primary-hover;
 }
 
 .section-items .items:hover .icon {
- color: var(--primary-hover);
+ color: $primary-hover;
  animation: scale_effect 400ms linear;
- border: 2px solid var(--primary-border);
+ border: 2px solid $primary-border;
 }
 
 .section-items .items .icon {
  width: 18px;
  height: 18px;
  border: 2px solid transparent;
- background-color: var(--primary-cards);
+ background-color: $primary-cards;
 }
 
 .popup {
  width: 100%;
  border-radius: 8px;
- border: 1.5px solid var(--primary-border);
+ border: 1.5px solid $primary-border;
 }
 
 .popup:before {
@@ -312,10 +300,10 @@
  bottom: -11px;
  position: absolute;
  border-radius: 0 5px 0 0;
- transform: rotate(135deg);
- border-right: 1.5px solid var(--primary-border);
- border-top: 1.5px solid var(--primary-border);
- background-color: var(--primary-cards);
+ transform: rotate(135deg) ;
+ border-right: 1.5px solid $primary-border;
+ border-top: 1.5px solid $primary-border;
+ background-color: $primary-cards;
 }
 
 .popup .text-info {
@@ -324,5 +312,5 @@
  padding: 6px 12px;
  border-radius: 5px;
  border-radius: 8px;
- background-color: var(--primary-cards);
+ background-color: $primary-cards;
 }

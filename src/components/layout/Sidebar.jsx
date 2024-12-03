@@ -1,5 +1,5 @@
 import '@/global.css';
-import '@/styles/components.css';
+import '@/styles/App.scss';
 import withToggleActive from '@/features/utils/withToggleActive';
 import mainIcon from '@/assets/icon/dinosaurus.png';
 

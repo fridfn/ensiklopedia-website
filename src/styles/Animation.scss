@@ -1,0 +1,74 @@
+@use './variable' as *;
+
+@keyframes honeycomb {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.honeycomb {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.honeycomb div {
+  -webkit-animation: honeycomb 2.1s infinite backwards;
+  animation: honeycomb 2.1s infinite backwards;
+  background: $primary-border;
+  height: 12px;
+  position: absolute;
+  width: 24px;
+}
+
+.honeycomb div:after, .honeycomb div:before {
+  content: '';
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.honeycomb div:after {
+  top: -6px;
+  border-bottom: 6px solid $primary-border;
+}
+
+.honeycomb div:before {
+  bottom: -6px;
+  border-top: 6px solid $primary-border;
+}
+
+$positions: (
+  (-28px, 0),
+  (-14px, 22px),
+  (14px, 22px),
+  (28px, 0),
+  (14px, -22px),
+  (-14px, -22px),
+  (0, 0)
+);
+
+.honeycomb {
+  @for $i from 1 through length($positions) {
+    div:nth-child(#{$i}) {
+      -webkit-animation-delay: #{($i - 1) * 0.1}s;
+      animation-delay: #{($i - 1) * 0.1}s;
+      left: nth(nth($positions, $i), 1);
+      top: nth(nth($positions, $i), 2);
+    }
+  }
+}

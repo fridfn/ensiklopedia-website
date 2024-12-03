@@ -1,4 +1,4 @@
-import '@/styles/components.css'
+import '@/styles/App.scss';
 import React, { useState, useEffect, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RouteTemplate from '@/routes/routesTemplate';

@@ -1,13 +1,13 @@
 import React from 'react';
 import '@/global.css';
-import '@/styles/classElement.css';
+import '@/styles/Element.scss';
 
-const ModalPopup = () => {
+const ModalPopup = ({ lokasi }) => {
   return (
    <>
    <div className="box-popup">
      <div className="items popup" id="popup">
-       <p className="text-info tiny-bold">about the information jsjsj s s sjsj jdjdjd sjdjd djdj hdjdjb djdjdjnd djjdnd jdjdj</p>
+       <p className="text-info tiny-bold">Penemuan fossil pertama di negara {lokasi}</p>
      </div>
    </div>
    </>

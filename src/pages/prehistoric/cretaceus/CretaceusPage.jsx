@@ -1,5 +1,5 @@
 import '@/global.css';
-import '@/styles/components.css';
+import '@/styles/App.scss';
 import Navbar from '@/components/layout/navbar';
 
 const CretaceusPage = () => {

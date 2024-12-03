@@ -1,10 +1,8 @@
 import React from "react";
-import UseNavigate from '@/routes/navigate'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Navbar = () => {
- 
   
   return (
     <div className="navbar">
