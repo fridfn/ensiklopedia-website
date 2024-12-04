@@ -9,7 +9,7 @@ const LoadingPage = () => {
   useEffect(() => {
    const timer = setTimeout(() => {
     setLoading(false);
-    navigate('/home');
+    navigate('/home/dinosaurus/pages/1');
    }, 3000);
    
    return () => clearTimeout(timer);

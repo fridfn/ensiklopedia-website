@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import '@/global.css';
 import '@/styles/App.scss';
@@ -8,12 +8,17 @@ import List from '@/components/layout/list';
 import Navbar from '@/components/layout/navbar';
 import Sidebar from '@/components/layout/Sidebar';
 import useDelayedItems from '@/features/utils/useDelayedItems';
-import useLimit from '@/features/utils/usePaginationLimit';
+import getPaginatedList from '@/features/utils/usePaginationLimit';
 
-const MainPage = () => {
+const MainLand = () => {
   const navigate = useNavigate();
+  const { pageNumber } = useParams();
   const [visible, setVisible] = useState(3);
   const [dinosaurus, setDinosaurus] = useState([]);
+  
+  const dinoPerPages = 2;
+  const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
+  const currentPage = parseInt(pageNumber, 10) || 1;
   
   useEffect(() => {
    fetch('/API/dinosaurs.json')
@@ -26,24 +31,19 @@ const MainPage = () => {
    .then(data => {
     setTimeout(() => {
      setDinosaurus(data.dinosaurs)
-    }, 10000);
+    }, 6000);
    }).catch(error => console.log('broken api', error))
   }, [])
   
   const visibleDino = useDelayedItems(dinosaurus, 1500);
   
-  const showMore = () => {
-   const increment = 3;
-   
-   setVisible(prevVisible => {
-    const newVisible = Math.min(prevVisible + increment, dinosaurus.length);
-    
-    if (newVisible > prevVisible) {
-     const newPageNumber = Math.ceil(newVisible / increment);
-     navigate(`/home/dinosaurus/pages=${newPageNumber}`);
+  const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
+  
+  const showListAndNavigate = (pageNumber)=> {
+    const nextPage = parseInt(pageNumber, 10) + 1;
+    if (currentPage < totalPages) {
+     navigate(`/home/dinosaurus/pages/${nextPage}`);
     }
-    return newVisible;
-   })
   }
   
   return (
@@ -53,13 +53,13 @@ const MainPage = () => {
       <Sidebar />
        <section>
          {visibleDino.length > 0 ? (
-           useLimit(visibleDino, visible).map((dino, index) => 
+           paginatedItems.map((dino, index) =>
             <List key={index} dinosaurus={dino.nama} periode={dino.periode} deskripsi={dino.deskripsi} lokasi={dino.lokasi_fosil}/>
            )
-          ) : ( <Loaders /> )
+          ) : (<Loaders />)
          }
          {visible < dinosaurus.length && (
-        <button onClick={() => showMore()}>testtt</button>)}
+        <button onClick={() => showListAndNavigate(pageNumber)} disabled={currentPage >= totalPages} className="tiny-bold">NEXT PAGE</button>)}
        </section>
       <Navbar />
      </div>
@@ -67,4 +67,4 @@ const MainPage = () => {
   )
 }
 
-export default MainPage;
+export default MainLand;
