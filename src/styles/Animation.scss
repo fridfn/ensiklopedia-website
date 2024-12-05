@@ -25,12 +25,12 @@
 }
 
 .honeycomb div {
-  -webkit-animation: honeycomb 2.1s infinite backwards;
-  animation: honeycomb 2.1s infinite backwards;
-  background: $primary-border;
-  height: 12px;
-  position: absolute;
-  width: 24px;
+ -webkit-animation: honeycomb 2.1s infinite backwards;
+ animation: honeycomb 2.1s infinite backwards;
+ background: $primary-border;
+ height: 12px;
+ position: absolute;
+ width: 24px;
 }
 
 .honeycomb div:after, .honeycomb div:before {

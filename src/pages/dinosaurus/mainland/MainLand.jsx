@@ -1,20 +1,23 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import '@/global.css';
 import '@/styles/App.scss';
 import Header from '@/components/layout/header';
 import Loaders from '@/components/common/Loading';
+import ButtonPagination from '@/components/common/ButtonPagination';
 import List from '@/components/layout/list';
 import Navbar from '@/components/layout/navbar';
 import Sidebar from '@/components/layout/Sidebar';
 import useDelayedItems from '@/features/utils/useDelayedItems';
 import getPaginatedList from '@/features/utils/usePaginationLimit';
+import ParticlesComponent from '@/features/particles/ParticlesComponent';
 
 const MainLand = () => {
   const navigate = useNavigate();
   const { pageNumber } = useParams();
   const [visible, setVisible] = useState(3);
   const [dinosaurus, setDinosaurus] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   
   const dinoPerPages = 2;
   const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
@@ -31,26 +34,19 @@ const MainLand = () => {
    .then(data => {
     setTimeout(() => {
      setDinosaurus(data.dinosaurs)
-    }, 6000);
+    }, 3000);
    }).catch(error => console.log('broken api', error))
   }, [])
   
-  const visibleDino = useDelayedItems(dinosaurus, 1500);
-  
   const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
   
-  const showListAndNavigate = (pageNumber)=> {
-    const nextPage = parseInt(pageNumber, 10) + 1;
-    if (currentPage < totalPages) {
-     navigate(`/home/dinosaurus/pages/${nextPage}`);
-    }
-  }
-  
+  const visibleDino = useDelayedItems(dinosaurus, 0);
   return (
     <>
      <div className="container">
       <Header />
       <Sidebar />
+      <ParticlesComponent />
        <section>
          {visibleDino.length > 0 ? (
            paginatedItems.map((dino, index) =>
@@ -59,7 +55,8 @@ const MainLand = () => {
           ) : (<Loaders />)
          }
          {visible < dinosaurus.length && (
-        <button onClick={() => showListAndNavigate(pageNumber)} disabled={currentPage >= totalPages} className="tiny-bold">NEXT PAGE</button>)}
+          <ButtonPagination pageNumber={pageNumber} currentPage={currentPage} totalPages={totalPages} />
+        )}
        </section>
       <Navbar />
      </div>

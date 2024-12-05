@@ -26,7 +26,7 @@ const List = ({ isActive, toggleActive, ...props }) => {
         </div>
       </div>
       <div className="wrapper-flex" style={{width: '100%'}}>
-        <div className="button-list wrapper-flex">
+        <div className="button-wrapper wrapper-flex">
          <button className="button tiny-bold">PELAJARI</button>
          <ion-icon class="icon small" id="paw" name="paw"></ion-icon>
         </div>
