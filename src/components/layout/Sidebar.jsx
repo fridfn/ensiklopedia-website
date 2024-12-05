@@ -38,7 +38,7 @@ const Sidebar = ({isActive, toggleActive})=> {
        <p className="text-info tiny-bold">Settings</p>
       </div>
      </div>
-     <p className="text-info tiny-bold" style={{fontSize: '10px', position: 'fixed', bottom: '15px', marginRight: '10px'}}>©Copyrights 2024 All right's reserved</p>
+     <p className="text-info tiny-bold" style={{fontSize: '10px', position: 'sticky', bottom: '15px', marginRight: '10px'}}>©Copyrights 2024 All right's reserved</p>
     </div>
    </>
   )

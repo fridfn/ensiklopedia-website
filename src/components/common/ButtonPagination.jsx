@@ -23,6 +23,7 @@ const ButtonPagination = ({pageNumber, currentPage, totalPages}) => {
     <ion-icon class="icon tiny" name="arrow-undo"></ion-icon>
     <p className="tiny-bold">UNDO</p>
    </button>
+   <div className="button-wrapper tiny-bold">PAGE {pageNumber} OF {totalPages}</div>
    <button className="button-wrapper wrapper-flex" onClick={() => showListAndNavigate(pageNumber)} disabled={currentPage >= totalPages}>
      <p className="tiny-bold">NEXT</p>
      <ion-icon class="icon tiny" name="arrow-redo"></ion-icon>

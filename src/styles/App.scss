@@ -102,7 +102,7 @@
 .list .descriptions-box {
  gap: 5px;
  display: flex;
- padding: 9px 9px;
+ padding: 10px;
  flex-direction: column;
  border-radius: 0 0 10px 10px;
  background-color: $secondary-hover;
@@ -144,6 +144,7 @@
 
 .button-wrapper {
  gap: 5px;
+ width: auto;
  padding: 4px 10px;
  border-radius: 5px;
  background-color: $secondary-hover;
@@ -272,13 +273,17 @@
  box-shadow: inset 2px 3px 6px 2px $primary-bg;
 }
 
-.section-items .items:hover, .section-items:hover > :not(:hover) .text-info {
+.section-items .items:hover {
  gap: 20px;
- color: $primary-hover;
+ box-shadow: inset 0px 2px 8px $primary-border;
+}
+
+.section-items:hover > :not(:hover) .text-info {
+ color: $primary-text;
 }
 
 .section-items .items:hover .icon {
- color: $primary-hover;
+ color: $primary-text;
  animation: scale_effect 400ms linear;
  border: 2px solid $primary-border;
 }
