@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import useDuplicateItems from '@/features/utils/useDuplicateItems.jsx';
 
 const Navbar = () => {
-  
   const navigationItems = () => {
    return (
     <div className="items center-clm">
