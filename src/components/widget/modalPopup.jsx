@@ -1,5 +1,4 @@
 import React from 'react';
-import '@/global.css';
 import '@/styles/Element.scss';
 
 const ModalPopup = ({ lokasi }) => {

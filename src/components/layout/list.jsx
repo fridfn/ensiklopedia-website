@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '@/global.css';
+import '@/Global.scss';
 import '@/styles/App.scss';
 import '@/styles/Active.scss';
 import iconDino from '@/assets/dino.svg';

@@ -1,4 +1,4 @@
-import '@/global.css';
+import '@/Global.scss';
 import '@/styles/App.scss';
 import { useNavigate } from 'react-router-dom'
 

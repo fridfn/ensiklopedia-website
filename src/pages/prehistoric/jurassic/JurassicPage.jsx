@@ -1,4 +1,3 @@
-import '@/global.css';
 import '@/styles/App.scss';
 import Navbar from '@/components/layout/navbar';
 

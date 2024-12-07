@@ -1,4 +1,4 @@
-import '@/global.css';
+import '@/Global.scss';
 import '@/styles/App.scss';
 import withToggleActive from '@/features/utils/withToggleActive';
 import mainIcon from '@/assets/icon/dinosaurus.png';

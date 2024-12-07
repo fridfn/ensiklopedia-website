@@ -1,3 +1,5 @@
+@use '@/styles/variable.scss' as *;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -32,9 +34,12 @@ h1 {
  margin: 0;
  padding: 0;
  cursor: none;
+ font-weight: 500;
  user-select: none;
+ color: $secondary-text;
  text-decoration: none;
  box-sizing: border-box;
+ 
 }
 
 button {
