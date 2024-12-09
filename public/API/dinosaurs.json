@@ -99,6 +99,78 @@
       "usia_terpanjang": "100 tahun"
     },
     {
+      "nama": "Brachiosaurus",
+      "periode": "Jurassic",
+      "makanan": "Herbivora",
+      "panjang": "26 meter",
+      "berat": "56 ton",
+      "tinggi": "12 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "154 hingga 150 juta tahun yang lalu",
+      "penemu": "Elmer S. Riggs, 1903",
+      "fosil_ditemukan_di": "Colorado, Amerika Serikat",
+      "deskripsi": "Brachiosaurus adalah dinosaurus herbivora yang sangat besar dengan leher panjang yang memungkinkannya memakan dedaunan dari pohon-pohon tinggi. Tubuhnya memiliki kaki depan yang lebih panjang dari kaki belakang, memberikan postur tubuh yang mirip dengan jerapah.",
+      "ciri_khusus": [
+        "Leher panjang untuk menjangkau dedaunan tinggi.",
+        "Kaki depan lebih panjang daripada kaki belakang.",
+        "Lubang hidung terletak di atas kepala."
+      ],
+      "habitat": "Hutan sub-tropis",
+      "predator": "Hampir tidak ada predator alami karena ukurannya yang besar.",
+      "diet_detail": "Konifer, pakis besar, dan pohon tinggi lainnya.",
+      "teknik_makan": "Memotong dedaunan tinggi dengan mulut berbentuk paruh.",
+      "kecepatan_berjalan": "10 hingga 20 km/jam",
+      "usia_terpanjang": "100 tahun"
+    },
+    {
+      "nama": "Brachiosaurus",
+      "periode": "Jurassic",
+      "makanan": "Herbivora",
+      "panjang": "26 meter",
+      "berat": "56 ton",
+      "tinggi": "12 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "154 hingga 150 juta tahun yang lalu",
+      "penemu": "Elmer S. Riggs, 1903",
+      "fosil_ditemukan_di": "Colorado, Amerika Serikat",
+      "deskripsi": "Brachiosaurus adalah dinosaurus herbivora yang sangat besar dengan leher panjang yang memungkinkannya memakan dedaunan dari pohon-pohon tinggi. Tubuhnya memiliki kaki depan yang lebih panjang dari kaki belakang, memberikan postur tubuh yang mirip dengan jerapah.",
+      "ciri_khusus": [
+        "Leher panjang untuk menjangkau dedaunan tinggi.",
+        "Kaki depan lebih panjang daripada kaki belakang.",
+        "Lubang hidung terletak di atas kepala."
+      ],
+      "habitat": "Hutan sub-tropis",
+      "predator": "Hampir tidak ada predator alami karena ukurannya yang besar.",
+      "diet_detail": "Konifer, pakis besar, dan pohon tinggi lainnya.",
+      "teknik_makan": "Memotong dedaunan tinggi dengan mulut berbentuk paruh.",
+      "kecepatan_berjalan": "10 hingga 20 km/jam",
+      "usia_terpanjang": "100 tahun"
+    },
+    {
+      "nama": "Brachiosaurus",
+      "periode": "Jurassic",
+      "makanan": "Herbivora",
+      "panjang": "26 meter",
+      "berat": "56 ton",
+      "tinggi": "12 meter",
+      "lokasi_fosil": "Amerika Utara",
+      "hidup": "154 hingga 150 juta tahun yang lalu",
+      "penemu": "Elmer S. Riggs, 1903",
+      "fosil_ditemukan_di": "Colorado, Amerika Serikat",
+      "deskripsi": "Brachiosaurus adalah dinosaurus herbivora yang sangat besar dengan leher panjang yang memungkinkannya memakan dedaunan dari pohon-pohon tinggi. Tubuhnya memiliki kaki depan yang lebih panjang dari kaki belakang, memberikan postur tubuh yang mirip dengan jerapah.",
+      "ciri_khusus": [
+        "Leher panjang untuk menjangkau dedaunan tinggi.",
+        "Kaki depan lebih panjang daripada kaki belakang.",
+        "Lubang hidung terletak di atas kepala."
+      ],
+      "habitat": "Hutan sub-tropis",
+      "predator": "Hampir tidak ada predator alami karena ukurannya yang besar.",
+      "diet_detail": "Konifer, pakis besar, dan pohon tinggi lainnya.",
+      "teknik_makan": "Memotong dedaunan tinggi dengan mulut berbentuk paruh.",
+      "kecepatan_berjalan": "10 hingga 20 km/jam",
+      "usia_terpanjang": "100 tahun"
+    },
+    {
       "nama": "Stegosaurus",
       "periode": "Jurassic",
       "makanan": "Herbivora",
