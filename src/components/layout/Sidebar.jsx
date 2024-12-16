@@ -3,7 +3,7 @@ import withToggleActive from '@/features/utils/withToggleActive';
 import mainIcon from '@/assets/icon/dinosaurus.png';
 import properties from '@/features/property/metadata.js';
 
-const Sidebar = ({isActive, toggleActive})=> {
+const Sidebar = ({ isActive, toggleActive }) => {
   const { sidebar } = properties;
   
   const sidebarItems = sidebar.name.map((name, index) => {

@@ -174,10 +174,27 @@
 
 .navbar .wrapper .items {
  padding: 7px 15px;
+ position: relative;
  border-radius: 5px 15px 5px;
  transition: all .3s ease-in-out;
  background-color: $secondary-cards;
  box-shadow: inset 1px -1px 7px 1px $primary-bg;
+}
+
+.navbar .wrapper .items:before, .section-items .items .text-info:before {
+ opacity: .8;
+ content: '🍀';
+ font-size: 17px;
+ position: absolute;
+}
+
+.items .text-info:before {
+ 
+}
+
+.navbar .wrapper .items:before, .section-items .items .text-info:before {
+ left: -5px;
+ top: -5px;
 }
 
 .navbar .wrapper .items:hover .icon {
@@ -281,9 +298,10 @@
 }
 
 .section-items .items:hover .icon {
+ z-index: 25;
  color: $primary-text;
- animation: scale_effect 400ms linear;
  border: 2px solid $primary-border;
+ animation: scale_effect 400ms linear;
 }
 
 .section-items .items .icon {
