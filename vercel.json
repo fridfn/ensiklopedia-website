@@ -6,7 +6,7 @@
   ],
   "redirects": [
     {
-     "source": "/legacy-path", "destination": "/new-path", "permanent": true 
+     "source": "/(.*)", "destination": "/", "permanent": true 
     }
   ]
 }
