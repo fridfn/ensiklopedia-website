@@ -1,13 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
-  "routes": [
     {
-      "src": "/service-worker.js",
-      "headers": {
-        "Content-Type": "application/javascript"
-      }
+     "source": "/old-path", "destination": "/new-path"
+    }
+  ],
+  "redirects": [
+    {
+     "source": "/legacy-path", "destination": "/new-path", "permanent": true 
     }
   ]
 }
