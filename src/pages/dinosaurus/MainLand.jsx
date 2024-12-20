@@ -38,7 +38,7 @@ const MainLand = () => {
       } finally {
        setTimeout(() => {
         setIsLoading(false);
-       }, 6000)
+       }, 1000)
       }
     };
     fetchDinosaurus();

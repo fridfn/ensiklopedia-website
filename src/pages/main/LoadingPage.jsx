@@ -10,7 +10,7 @@ const LoadingPage = () => {
    const timer = setTimeout(() => {
     setLoading(false);
     navigate('/home/dinosaurus/pages/1');
-   }, 3000);
+   }, 7000);
    
    return () => clearTimeout(timer);
   }, [navigate]);
