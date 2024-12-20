@@ -9,7 +9,7 @@ import ModalPopup from '@/components/widget/modalPopup';
 import withToggleActive from '@/features/utils/withToggleActive';
 
 const List = ({ isActive, toggleActive, ...props }) => {
-  const { dinosaurus, deskripsi, lokasi, periode } = props;
+  const { dinosaurus, deskripsi, lokasi, periode} = props;
   
   return (
     <div className="list" data-aos="zoom-in" data-aos-delay="500" data-aos-once="true">
