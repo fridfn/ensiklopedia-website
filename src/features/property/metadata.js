@@ -36,6 +36,7 @@ const properties = {
     'settings',
     'chatbubbles',
     'people',
+    'whatsapp',
    ],
    count: 5,
    content: '',
