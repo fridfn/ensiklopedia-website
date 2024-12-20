@@ -29,7 +29,7 @@ const List = ({ isActive, toggleActive, ...props }) => {
       </div>
       <div className="wrapper-flex" style={{width: '100%'}}>
         <div className="button-wrapper wrapper-flex">
-         <Link to={`/home/dinosaurus/details/${props.lokasi}`} className="button tiny-bold">PELAJARI</Link>
+         <Link to="/home/dinosaurus/details/ufudu" className="button tiny-bold">PELAJARI</Link>
          <ion-icon class="icon small" id="paw" name="paw"></ion-icon>
         </div>
         <div className={`container-popup wrapper-flex ${isActive ? 'active' : ''}`}>
