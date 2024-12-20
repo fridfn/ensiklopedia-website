@@ -1,0 +1,69 @@
+@use './variable.scss' as *;
+
+
+.navbar .wrapper .items:before {
+ opacity: .8;
+ content: '🍀';
+ font-size: 17px;
+ position: absolute;
+}
+
+.navbar .wrapper .items:before, .section-items .items .text-info:before {
+ left: -5px;
+ top: -5px;
+}
+
+.sidebar .section-items:before {
+ left: 0;
+ top: 220px;
+ content: '';
+ width: 100%;
+ height: 3px;
+ position: absolute;
+ background-color: $primary-border;
+}
+
+.section-items .items:nth-child(1n+2):before{
+ top: -15px;
+ left: 20px;
+ width: 15px;
+ content: '';
+ height: 15px;
+ position: absolute;
+ background-color: $secondary-cards;
+ box-shadow: inset 2px 3px 6px 2px $primary-bg;
+}
+
+#background-list:before {
+ inset: 0;
+ content: '';
+ position: absolute;
+ object-fit: contain;
+ background-size: cover;
+ background-position: center;
+ background-image: url('/src/assets/image/background.jpg');
+}
+
+.popup:before {
+ content: '';
+ right: 10px;
+ width: 20px;
+ height: 20px;
+ bottom: -11px;
+ position: absolute;
+ border-radius: 0 5px 0 0;
+ transform: rotate(135deg) ;
+ border-right: 1.5px solid $primary-border;
+ border-top: 1.5px solid $primary-border;
+ background-color: $primary-cards;
+}
+
+///      HOVER PSEUDO SCSS ELEMENT     ///
+
+.wrapper-flex .button-wrapper:hover {
+ color: $secondary-icon;
+ border-color: $secondary-border;
+}
+.wrapper-flex .button-wrapper:hover .icon, .wrapper-flex .button-wrapper:hover .tiny-bold {
+ color: $secondary-icon;
+}

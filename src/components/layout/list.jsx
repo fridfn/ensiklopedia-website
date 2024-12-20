@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import '@/Global.scss';
 import '@/styles/App.scss';
 import '@/styles/Active.scss';
+import { Link } from 'react-router-dom';
 import iconDino from '@/assets/dino.svg';
 import scratch from '@/assets/icon/scratch.svg';
 import ModalPopup from '@/components/widget/modalPopup';
 import withToggleActive from '@/features/utils/withToggleActive';
 
 const List = ({ isActive, toggleActive, ...props }) => {
+ console.log({props})
   return (
-    <div className="list">
+    <div className="list" data-aos="zoom-in" data-aos-delay="500" data-aos-once="true">
      <div className="wrapper width-full" id="background-list">
        <div className="box-image">
          <img className="icon-image" src={iconDino}/>
@@ -27,7 +29,7 @@ const List = ({ isActive, toggleActive, ...props }) => {
       </div>
       <div className="wrapper-flex" style={{width: '100%'}}>
         <div className="button-wrapper wrapper-flex">
-         <button className="button tiny-bold">PELAJARI</button>
+         <Link to={`/home/dinosaurus/details/${props.lokasi}`} className="button tiny-bold">PELAJARI</Link>
          <ion-icon class="icon small" id="paw" name="paw"></ion-icon>
         </div>
         <div className={`container-popup wrapper-flex ${isActive ? 'active' : ''}`}>

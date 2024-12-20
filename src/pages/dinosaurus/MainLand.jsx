@@ -14,32 +14,38 @@ import ParticlesComponent from '@/features/particles/ParticlesComponent';
 const MainLand = () => {
   const navigate = useNavigate();
   const { pageNumber } = useParams();
+  const [error, setError] = useState(null);
   const [visible, setVisible] = useState(3);
   const [dinosaurus, setDinosaurus] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   
-  const dinoPerPages = 2;
+  const dinoPerPages = 4;
   const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
   const currentPage = parseInt(pageNumber, 10) || 1;
   
   useEffect(() => {
-   fetch('/API/dinosaurs.json')
-   .then(response => {
-     if(!response.ok) {
-      throw new Error('Jaringan ke API buruk')
-     }
-     return response.json();
-   })
-   .then(data => {
-    setTimeout(() => {
-     setDinosaurus(data.dinosaurs)
-    }, 3000);
-   }).catch(error => console.log('broken api', error))
-  }, [])
+    const fetchDinosaurus = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch('/API/dinosaurs.json');
+        if (!response.ok) {
+          throw new Error('Jaringan ke API buruk');
+        }
+        const data = await response.json();
+        setDinosaurus(data.dinosaurs);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+       setTimeout(() => {
+        setIsLoading(false);
+       }, 6000)
+      }
+    };
+    fetchDinosaurus();
+  }, [currentPage]);
   
   const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
   
-  const visibleDino = useDelayedItems(dinosaurus, 0);
   return (
     <>
      <div className="container">
@@ -47,15 +53,25 @@ const MainLand = () => {
       <Sidebar />
       <ParticlesComponent />
        <section>
-         {visibleDino.length > 0 ? (
-           paginatedItems.map((dino, index) =>
-            <List key={index} dinosaurus={dino.nama} periode={dino.periode} deskripsi={dino.deskripsi} lokasi={dino.lokasi_fosil}/>
-           )
-          ) : (<Loaders />)
-         }
-         {visible < dinosaurus.length && (
-          <ButtonPagination pageNumber={pageNumber} currentPage={currentPage} totalPages={totalPages} />
-        )}
+         {!isLoading ? (
+          <>
+           {paginatedItems.map((dino, index) => (
+           <List
+            key={index}
+            dinosaurus={dino.nama}
+            periode={dino.periode}
+            deskripsi={dino.deskripsi}
+            lokasi={dino.lokasi_fosil}
+           />
+           ))}
+           
+           <ButtonPagination 
+            pageNumber={pageNumber} 
+            currentPage={currentPage} 
+            totalPages={totalPages}
+           />
+          </>
+          ) : (<Loaders />) }
        </section>
       <Navbar />
      </div>

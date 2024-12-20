@@ -1,3 +1,5 @@
+import path from 'path';
+import sass from 'vite-plugin-sass'
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from 'vite-plugin-pwa';
@@ -6,6 +8,7 @@ import envCompatible from 'vite-plugin-env-compatible';
 export default defineConfig({
   plugins: [
   react(),
+  sass(),
   envCompatible(),
   VitePWA({
       registerType: 'autoUpdate',
@@ -32,7 +35,7 @@ export default defineConfig({
     })],
   resolve: {
     alias: {
-      '@': '/src',
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
@@ -45,5 +48,5 @@ export default defineConfig({
     rollupOptions: {
       input: './index.html',
     },
-  }
+  },
 });

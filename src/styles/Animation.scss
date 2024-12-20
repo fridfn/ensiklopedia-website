@@ -1,4 +1,5 @@
 @use './variable' as *;
+@use 'sass:list';
 
 @keyframes honeycomb {
   0%,
@@ -21,16 +22,18 @@
 .honeycomb {
   width: 20px;
   height: 35px;
-  position: relative;
+  position: absolute;
 }
 
 .honeycomb div {
- -webkit-animation: honeycomb 2.1s infinite backwards;
- animation: honeycomb 2.1s infinite backwards;
- background: $primary-border;
+ width: 24px;
  height: 12px;
  position: absolute;
- width: 24px;
+ background: $primary-border;
+ border-top: 2px solid $primary-border;
+ border-bottom: 2px solid $primary-border;
+ -webkit-animation: honeycomb 2.1s infinite backwards;
+ animation: honeycomb 2.1s infinite backwards;
 }
 
 .honeycomb div:after, .honeycomb div:before {
@@ -63,12 +66,12 @@ $positions: (
 );
 
 .honeycomb {
-  @for $i from 1 through length($positions) {
+  @for $i from 1 through list.length($positions) {
     div:nth-child(#{$i}) {
       -webkit-animation-delay: #{($i - 1) * 0.1}s;
       animation-delay: #{($i - 1) * 0.1}s;
-      left: nth(nth($positions, $i), 1);
-      top: nth(nth($positions, $i), 2);
+      left: list.nth(list.nth($positions, $i), 1);
+      top: list.nth(list.nth($positions, $i), 2);
     }
   }
 }

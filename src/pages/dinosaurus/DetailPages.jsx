@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const detailPages = () => {
+const DetailPages = () => {
   return (
    <h1>HELLO DETAIL PAGES</h1>
   )
 }
 
-export default detailPages;
+export default DetailPages;

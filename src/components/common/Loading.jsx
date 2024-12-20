@@ -1,5 +1,6 @@
 import React from 'react';
 import '@/styles/Animation.scss';
+import '@/styles/Pseudo.scss';
 
 
 const Loading = () => {

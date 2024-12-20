@@ -2,11 +2,12 @@ import '@/Global.scss';
 import '@/styles/App.scss';
 import { useNavigate } from 'react-router-dom'
 
-const ButtonPagination = ({pageNumber, currentPage, totalPages}) => {
+const ButtonPagination = ({ pageNumber, currentPage, totalPages }) => {
   const navigate = useNavigate();
   const showListAndNavigate = (pageNumber)=> {
     const nextPage = parseInt(pageNumber, 10) + 1;
     if (currentPage < totalPages) {
+     window.scrollTo({ top: 0 })
      navigate(`/home/dinosaurus/pages/${nextPage}`);
     }
   }
@@ -14,6 +15,7 @@ const ButtonPagination = ({pageNumber, currentPage, totalPages}) => {
   const undoListAndNavigate = (pageNumber)=> {
    const undoPage = parseInt(pageNumber, 10) - 1;
     if (undoPage < totalPages) {
+     window.scrollTo({ top: 0 })
      navigate(`/home/dinosaurus/pages/${undoPage}`);
     }
   }

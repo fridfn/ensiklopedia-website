@@ -1,4 +1,4 @@
-@use '@/styles/variable.scss' as *;
+@use './styles/variable.scss' as *;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -36,10 +36,9 @@ h1 {
  cursor: none;
  font-weight: 500;
  user-select: none;
- color: $secondary-text;
  text-decoration: none;
+ color: $secondary-text;
  box-sizing: border-box;
- 
 }
 
 button {
@@ -106,6 +105,7 @@ button {
 
 .tiny-bold {
  font-size: 12.5px;
+ transition: .3s linear;
 }
 
 .big, .small, .litle, .tiny-bold {

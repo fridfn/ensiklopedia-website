@@ -13,7 +13,7 @@ const ParticlesComponent = () => {
       init={particlesInit}
       options={{
         particles: {
-          number: { value: 10 },
+          number: { value: 7 },
           color: { value: "#00ee29" },
           shape: {
             type: "char",
