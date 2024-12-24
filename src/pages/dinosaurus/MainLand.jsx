@@ -1,6 +1,6 @@
+import '@/styles/App.scss';
 import { useNavigate, useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import '@/styles/App.scss';
 import Header from '@/components/layout/header';
 import Loaders from '@/components/common/Loading';
 import ButtonPagination from '@/components/common/ButtonPagination';
@@ -10,6 +10,7 @@ import Sidebar from '@/components/layout/Sidebar';
 import useDelayedItems from '@/features/utils/useDelayedItems';
 import getPaginatedList from '@/features/utils/usePaginationLimit';
 import ParticlesComponent from '@/features/particles/ParticlesComponent';
+import fetchDinosaurus from '@/features/hooks/fetchDinosaurus';
 
 const MainLand = () => {
   const navigate = useNavigate();
@@ -24,37 +25,21 @@ const MainLand = () => {
   const currentPage = parseInt(pageNumber, 10) || 1;
   
   useEffect(() => {
-    const fetchDinosaurus = async () => {
-      try {
-        setIsLoading(true);
-        const response = await fetch('/API/dinosaurs.json');
-        if (!response.ok) {
-          throw new Error('Jaringan ke API buruk');
-        }
-        const data = await response.json();
-        setDinosaurus(data.dinosaurs);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-       setTimeout(() => {
-        setIsLoading(false);
-       }, 1000)
-      }
-    };
-    fetchDinosaurus();
+   fetchDinosaurus(setDinosaurus, setIsLoading, setError);
   }, [currentPage]);
   
   const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
+  const iconButton = ['search-sharp', 'options']
   
   return (
     <>
      <div className="container">
-      <Header />
+      <Header button={iconButton} title="Ensiklopedia" />
       <Sidebar />
-      <ParticlesComponent />
        <section>
          {!isLoading ? (
           <>
+           <ParticlesComponent icons="🍀"/>
            {paginatedItems.map((dino, index) => (
            <List
             key={index}
@@ -71,7 +56,7 @@ const MainLand = () => {
             totalPages={totalPages}
            />
           </>
-          ) : (<Loaders />) }
+          ) : (<Loaders event="blur" />) }
        </section>
       <Navbar />
      </div>

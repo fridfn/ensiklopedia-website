@@ -2,11 +2,11 @@ import Particles from "react-tsparticles";
 import dinosaurus from "./dinosaurus.png";
 import { loadFull } from "tsparticles";
 
-const ParticlesComponent = () => {
+const ParticlesComponent = (icons) => {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-
+  
   return (
     <Particles
       id="tsparticles"
@@ -19,7 +19,7 @@ const ParticlesComponent = () => {
             type: "char",
             image: { src: dinosaurus, width: 500, height: 500 },
             character: {
-              value: ["🍀"],
+              value: `${icons.icons}`,
               font: "FontAwesome",
             },
           },

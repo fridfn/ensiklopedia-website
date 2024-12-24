@@ -44,6 +44,14 @@
  border-bottom: 3px solid $primary-border;
 }
 
+.container {
+ display: flex;
+ width: 100%;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
+}
+
 .title-heading {
  font-size: 20px;
 }
@@ -71,6 +79,7 @@
  display: flex;
  overflow: hidden;
  border-radius: 5px;
+ position: relative;
  flex-direction: column;
  align-items: flex-start;
  transition: all .3s ease-in;
@@ -134,7 +143,7 @@
 .button-wrapper {
  gap: 5px;
  width: auto;
- padding: 3px 10px;
+ padding: 3px 5px;
  border-radius: 5px;
  transition: .2s linear;
  border: 1.5px solid transparent;
@@ -279,4 +288,45 @@
  border-radius: 5px;
  border-radius: 8px;
  background-color: $primary-cards;
+}
+
+.box-notfound {
+ display: flex;
+ width: 350px;
+ gap: 20px;
+ height: auto;
+ padding: 20px;
+ text-align: start;
+ align-items: center;
+ border-radius: 10px;
+ padding-right: 40px;
+ justify-content: center;
+ border: 2px solid #6f0000;
+ background: $primary-cards;
+}
+
+.box-notfound .not-found {
+ color: #d33300;
+ font-size: 65px;
+ padding-right: 20px;
+ border-right: 2.5px solid #ffffff;
+}
+
+.wrapper-notfound {
+ gap: 10px;
+ display: flex;
+ flex-direction: column;
+}
+
+.wrapper-notfound .button-wrapper {
+ background-color: #4b0000;
+ box-shadow: transparent;
+ box-shadow: 0 0 0 0;
+ width: 100px;
+}
+
+.wrapper-notfound .button-wrapper .icon {
+ background-color: #4b0000;
+ font-size: 15px;
+ color: #ffffff;
 }

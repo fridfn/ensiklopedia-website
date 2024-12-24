@@ -6,7 +6,7 @@ const WrappedButton = ({ icons }) => {
   return (
    <>
     <div className="wrapper">
-      { icons.map((name, index) => {
+      {icons.map((name, index) => {
        return <IconButton key={index} name={name} />
       })}
     </div>

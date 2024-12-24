@@ -1,4 +1,12 @@
 
+.container-loading .wrapper.blur {
+ backdrop-filter: blur(1px);
+}
+
+.list.active {
+ border-color: blue;
+}
+
 .container-popup.active {
  opacity: 1;
  overflow-x: visible;

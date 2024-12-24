@@ -3,17 +3,19 @@ import '@/styles/Animation.scss';
 import '@/styles/Pseudo.scss';
 
 
-const Loading = () => {
+const Loading = ({ event, type }) => {
+  
   return (
    <div className="container-loading">
+     <div className={`wrapper ${event}`}></div>
     <div className="honeycomb">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
+      <div className="comb"></div>
     </div>
    </div>
   )

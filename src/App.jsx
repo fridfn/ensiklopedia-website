@@ -25,14 +25,14 @@ function App() {
     });
    }
    
-   AOS.init();
+   AOS.init({ duration: '1200', once: true});
    
   return (
    <div>
     <Router>
      <Routes>
       <Route path='/' element={<LoadingPage />} />
-      <Route path='/landing' element={<LandingPage />} />
+      <Route path='/home' element={<LandingPage />} />
       <Route path='/home/dinosaurus/pages/:pageNumber' element={<MainLand />} />
       <Route path='/home/dinosaurus/details/:species' element={<DetailPages />} />
       <Route path='*' element={<NotFound />} />
