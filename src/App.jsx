@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import LandingPage from '@/pages/main/LandingPage';
 import NotFound from '@/pages/main/NotFound';
 import LoadingPage from '@/pages/main/LoadingPage';
-import MainLand from '@/pages/dinosaurus/MainLand';
+import PagesList from '@/pages/dinosaurus/PagesList';
 import DetailPages from '@/pages/dinosaurus/DetailPages';
 
 
@@ -33,7 +33,7 @@ function App() {
      <Routes>
       <Route path='/' element={<LoadingPage />} />
       <Route path='/home' element={<LandingPage />} />
-      <Route path='/home/dinosaurus/pages/:pageNumber' element={<MainLand />} />
+      <Route path='/home/dinosaurus/pages/:pageNumber' element={<PagesList />} />
       <Route path='/home/dinosaurus/details/:species' element={<DetailPages />} />
       <Route path='*' element={<NotFound />} />
      </Routes>

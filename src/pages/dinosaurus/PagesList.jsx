@@ -7,22 +7,22 @@ import ButtonPagination from '@/components/common/ButtonPagination';
 import List from '@/components/layout/list';
 import Navbar from '@/components/layout/navbar';
 import Sidebar from '@/components/layout/Sidebar';
+import NotFound from '@/pages/main/NotFound';
 import useDelayedItems from '@/features/utils/useDelayedItems';
 import getPaginatedList from '@/features/utils/usePaginationLimit';
 import ParticlesComponent from '@/features/particles/ParticlesComponent';
 import fetchDinosaurus from '@/features/hooks/fetchDinosaurus';
 
-const MainLand = () => {
+const PagesList = () => {
   const navigate = useNavigate();
   const { pageNumber } = useParams();
   const [error, setError] = useState(null);
-  const [visible, setVisible] = useState(3);
   const [dinosaurus, setDinosaurus] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   
   const dinoPerPages = 4;
-  const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
   const currentPage = parseInt(pageNumber, 10) || 1;
+  const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
   
   useEffect(() => {
    fetchDinosaurus(setDinosaurus, setIsLoading, setError);
@@ -30,6 +30,12 @@ const MainLand = () => {
   
   const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
   const iconButton = ['search-sharp', 'options']
+  
+  if (isNaN(pageNumber) || currentPage > totalPages || pageNumber <= 0) {
+   if (!isLoading) {
+     return ( <NotFound /> );
+   }
+  }
   
   return (
     <>
@@ -56,7 +62,7 @@ const MainLand = () => {
             totalPages={totalPages}
            />
           </>
-          ) : (<Loaders event="blur" />) }
+          ) : (<Loaders event="" />) }
        </section>
       <Navbar />
      </div>
@@ -64,4 +70,4 @@ const MainLand = () => {
   )
 }
 
-export default MainLand;
+export default PagesList;

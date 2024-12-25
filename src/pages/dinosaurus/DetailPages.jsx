@@ -4,6 +4,7 @@ import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import fetchDinosaurus from '@/features/hooks/fetchDinosaurus';
 import Loading from '@/components/common/Loading';
 import Header from '@/components/layout/header';
+import Cards from '@/components/layout/cards';
 
 const DetailPages = () => {
   const navigate = useNavigate();
