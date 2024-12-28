@@ -12,6 +12,7 @@ const ParticlesComponent = (icons) => {
       id="tsparticles"
       init={particlesInit}
       options={{
+        detectRetina: true,
         particles: {
           number: { value: 7 },
           color: { value: "#00ee29" },
@@ -24,12 +25,12 @@ const ParticlesComponent = (icons) => {
             },
           },
           size: {
-           value: 20,
+           value: 15,
            random: true,
            anim: {
-            speed: 5,
+            speed: 3,
             enable: false,
-            size_min: 10,
+            size_min: 5,
            },
           },
           opacity: {

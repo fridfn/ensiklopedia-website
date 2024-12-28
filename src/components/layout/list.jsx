@@ -10,6 +10,7 @@ import withToggleActive from '@/features/utils/withToggleActive';
 import ButtonWithLoading from '@/features/hooks/ButtonWithLoading';
 import ButtonWithIcon from '@/components/common/ButtonWithIcon';
 import checkDuplicateArr from '@/features/hooks/checkDuplicateArr';
+import ComponentPlants from '@/components/ui/ComponentPlants';
 
 let arrSpecies = [];
 
@@ -23,6 +24,7 @@ const List = ({ isActive, toggleActive, ...props }) => {
   
   return (
    <div className='list' data-aos='zoom-in' data-aos-delay="500">
+     <ComponentPlants plants='plants4' type="absolute" />
      <div className="wrapper width-full" id="background-list">
        <div className="box-image">
          <img className="icon-image" src={iconDino}/>
@@ -39,7 +41,15 @@ const List = ({ isActive, toggleActive, ...props }) => {
         </div>
       </div>
       <div className="wrapper-flex" style={{width: '100%'}}>
-        <ButtonWithLoading icon="paw" name="PELAJARI" page={`/home/dinosaurus/details/${species}`} event='blur' data={noDuplicateArr}/>
+        <ButtonWithLoading 
+          icon="paw"
+          name="PELAJARI" 
+          type='gif'
+          event='blur'
+          timeout='5000'
+          data={noDuplicateArr}
+          page={`/home/dinosaurus/details/${species}`}
+         />
         <div className={`container-popup wrapper-flex ${isActive ? 'active' : ''}`}>
          <ModalPopup lokasi={lokasi}/>
          <button className="buttons" onClick={toggleActive}>

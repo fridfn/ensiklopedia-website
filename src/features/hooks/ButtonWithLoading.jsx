@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Loading from '@/components/common/Loading';
 import ButtonWithIcon from '@/components/common/ButtonWithIcon';
 
-const ButtonWithLoading = ({ icon, name, page, event, data }) => {
+const ButtonWithLoading = ({ icon, name, page, event, data, type, timeout }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(null);
   
@@ -13,12 +13,14 @@ const ButtonWithLoading = ({ icon, name, page, event, data }) => {
    setTimeout(() => {
      setIsLoading(false);
      navigate(page, { state: {datas: data}});
-   }, 3000);
+   }, timeout || 4000);
   }
   
   return (
    <>
-    {isLoading && (<Loading event={event}/>)}
+    {isLoading && (
+      <Loading event={event} type='gif' />
+    )}
     <ButtonWithIcon onClick={handleClick} icon={icon} name={name} />
    </>
   )

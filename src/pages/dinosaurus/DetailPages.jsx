@@ -4,7 +4,9 @@ import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import fetchDinosaurus from '@/features/hooks/fetchDinosaurus';
 import Loading from '@/components/common/Loading';
 import Header from '@/components/layout/header';
-import Cards from '@/components/layout/cards';
+import CardsIcons from '@/components/common/CardsIcon';
+import CardsDetail from '@/components/common/CardsDetail';
+import ComponentPlants from '@/components/ui/ComponentPlants';
 
 const DetailPages = () => {
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const DetailPages = () => {
    } else {
     const fetchData = async () => {
      try {
-      const data = await fetchDinosaurus(setDetail, setIsLoading, setError)
+      const data = await fetchDinosaurus(setDetail, setIsLoading, setError, 500)
        
        const getSpecies = data.map((props) => props.nama.split(' ').join('').toLocaleLowerCase());
        
@@ -38,6 +40,7 @@ const DetailPages = () => {
    }
   }, [datas]);
   
+  
   return (
    <>
      {isLoading ? (
@@ -45,7 +48,11 @@ const DetailPages = () => {
      ) : (!validateLetterLess ? (
         <NotFound />
        ) : (
-        <Header title={species} useBack={["arrow-back"]} />
+        <div className="container wrapper-column">
+          <Header title={species} useBack={["arrow-back"]} />
+          <CardsIcons />
+          <CardsDetail />
+        </div>
        )
      )}
    </>

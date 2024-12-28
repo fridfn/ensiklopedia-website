@@ -25,7 +25,7 @@ const PagesList = () => {
   const totalPages = Math.ceil(dinosaurus.length / dinoPerPages);
   
   useEffect(() => {
-   fetchDinosaurus(setDinosaurus, setIsLoading, setError);
+   fetchDinosaurus(setDinosaurus, setIsLoading, setError, 5000);
   }, [currentPage]);
   
   const paginatedItems = getPaginatedList(currentPage, pageNumber, dinoPerPages, dinosaurus);
@@ -40,29 +40,29 @@ const PagesList = () => {
   return (
     <>
      <div className="container">
+     <ParticlesComponent icons="🍀" />
       <Header button={iconButton} title="Ensiklopedia" />
       <Sidebar />
        <section>
          {!isLoading ? (
           <>
-           <ParticlesComponent icons="🍀"/>
-           {paginatedItems.map((dino, index) => (
+           {paginatedItems.map(({ nama, periode, deskripsi, lokasi_fosil }, index) => (
            <List
-            key={index}
-            dinosaurus={dino.nama}
-            periode={dino.periode}
-            deskripsi={dino.deskripsi}
-            lokasi={dino.lokasi_fosil}
+             key={index}
+             dinosaurus={nama}
+             periode={periode}
+             deskripsi={deskripsi}
+             lokasi={lokasi_fosil}
            />
            ))}
            
            <ButtonPagination 
-            pageNumber={pageNumber} 
-            currentPage={currentPage} 
-            totalPages={totalPages}
+             pageNumber={pageNumber} 
+             currentPage={currentPage} 
+             totalPages={totalPages}
            />
           </>
-          ) : (<Loaders event="" />) }
+          ) : (<Loaders type="gif" />) }
        </section>
       <Navbar />
      </div>

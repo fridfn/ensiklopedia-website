@@ -1,14 +1,13 @@
 import React from 'react';
 import '@/styles/Animation.scss';
 import '@/styles/Pseudo.scss';
-
+import LoadingGif from '@/components/common/LoadingGif';
 
 const Loading = ({ event, type }) => {
-  
-  return (
-   <div className="container-loading">
-     <div className={`wrapper ${event}`}></div>
-    <div className="honeycomb">
+ 
+  const Honeycomb = () => {
+   return (
+     <div className="honeycomb">
       <div className="comb"></div>
       <div className="comb"></div>
       <div className="comb"></div>
@@ -17,6 +16,17 @@ const Loading = ({ event, type }) => {
       <div className="comb"></div>
       <div className="comb"></div>
     </div>
+   )
+  }
+  
+  return (
+   <div className="container-loading">
+     <div className={`wrapper ${event}`}></div>
+     {type === 'gif' ? (
+       <LoadingGif gif='loading_dino' />
+      ) : (
+       <Honeycomb />
+      ) }
    </div>
   )
 }

@@ -1,4 +1,6 @@
-const fetchDinosaurus = async (setDinosaurus, setIsLoading, setError) => {
+const fetchDinosaurus = async (setDinosaurus, setIsLoading, setError, timeout) => {
+  const delay = timeout || 2000;
+  
   try {
     setIsLoading(true);
     const response = await fetch('/API/dinosaurs.json');
@@ -14,7 +16,7 @@ const fetchDinosaurus = async (setDinosaurus, setIsLoading, setError) => {
   } finally {
    setTimeout(() => {
     setIsLoading(false);
-   }, 2000);
+   }, delay);
   }
  };
  

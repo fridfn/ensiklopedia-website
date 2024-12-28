@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+ overflow-x: hidden;
+}
+
 h1 {
  z-index: 8888;
  position: fixed;
@@ -29,7 +33,6 @@ h1 {
  pointer-events: none;
 }
 
-
 * {
  margin: 0;
  padding: 0;
@@ -44,6 +47,21 @@ h1 {
 button {
  border: 0px solid transparent;
  background-color: transparent;
+}
+
+ion-icon {
+ color: $primary-icon;
+}
+
+.container {
+ padding: 110px 10px 90px 10px;
+ overflow: hidden;
+}
+
+.loading-gif {
+ top: 40%;
+ left: 40%;
+ position: absolute;
 }
 
 .container section {
@@ -67,20 +85,9 @@ button {
  top: 0px;
 }
 
-.blur-background.active body {
- overflow: hidden;
-}
-
-:root {
- padding: 90px 10px;
-}
-
 #bookmark {
  padding: 5px;
  border-radius: 0 0 0 5px;
-}
-
-#popup {
 }
 
 .name-list {
@@ -100,7 +107,26 @@ button {
 }
 
 .tiny {
- font-size: 12px;
+ font-size: 11.5px;
+}
+
+.tiny-small {
+ font-weight: 400;
+ font-size: 11.5px;
+ transition: .3s linear;
+}
+
+.ab-left {
+ left: -15%;
+}
+
+.plants-wall {
+ top: 25px;
+ z-index: 19;
+ width: 150px;
+ height: 100px;
+ position: absolute;
+ object-fit: contain;
 }
 
 .tiny-bold {
@@ -110,6 +136,10 @@ button {
 
 .big, .small, .litle, .tiny-bold, .giant {
  font-weight: 500;
+}
+
+.underline {
+ border-bottom: 2px solid $secondary-text;
 }
 
 .width-full {
@@ -148,6 +178,18 @@ button {
  align-items: center;
  flex-direction: column;
  justify-content: center;
+}
+
+.pd-l-text {
+ margin-left: 40%;
+}
+
+.pd-top {
+ padding-top: 10px;
+}
+
+.pd-r-text {
+ margin-right: 40%;
 }
 
 .center-flx {
