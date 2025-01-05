@@ -17,17 +17,11 @@ body {
  overflow-x: hidden;
 }
 
-h1 {
- z-index: 8888;
- position: fixed;
- top: 0;
-}
-
 #tsparticles {
  position: fixed; 
  top: 0;
  left: 0;
- z-index: 15;
+ z-index: 19;
  width: 100vw;
  height: 100vh; 
  pointer-events: none;
@@ -54,14 +48,19 @@ ion-icon {
 }
 
 .container {
+ overflow-x: hidden;
  padding: 110px 10px 90px 10px;
- overflow: hidden;
 }
 
 .loading-gif {
  top: 40%;
  left: 40%;
+ z-index: 21;
+ display: flex;
  position: absolute;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
 }
 
 .container section {
@@ -99,7 +98,7 @@ ion-icon {
 }
 
 .small {
- font-size: 17px;
+ font-size: 18px;
 }
 
 .litle {
@@ -114,14 +113,14 @@ ion-icon {
  font-weight: 400;
  font-size: 11.5px;
  transition: .3s linear;
+ text-transform: capitalize;
 }
 
 .ab-left {
  left: -15%;
 }
 
-.plants-wall {
- top: 25px;
+.image-component {
  z-index: 19;
  width: 150px;
  height: 100px;
@@ -144,6 +143,10 @@ ion-icon {
 
 .width-full {
  width: 100%;
+}
+
+.padding-button {
+ padding: 3px 10px;
 }
 
 .items {

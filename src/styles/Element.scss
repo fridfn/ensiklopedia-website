@@ -1,4 +1,5 @@
 @use './variable.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Ephesis&family=Frijole&family=Sigmar&display=swap');
 
 .container-popup {
  position: relative;
@@ -12,6 +13,7 @@
  height: auto;
  right: -10px;
  bottom: 50px;
+ z-index: 50;
 }
 
 .container-loading {
@@ -36,41 +38,71 @@
  background-color: $primary-cards;
 }
 
+.wrapper-cards-icons .cards-icons .image-component {
+ width: 150px;
+ height: 150px;
+ margin-right: 45px;
+}
+
 .wrapper-cards-icons {
  z-index: 10; 
  width: 100%;
  height: 100%;
  display: flex;
- position: relative;
- align-items: center;
+ align-items: start;
+ justify-content: start;
 }
 
 .cards-icons {
  right: -50px;
  opacity: .7;
  position: absolute;
-}
-
-.cards-icons-png {
- z-index: 10; 
- object-fit: contain;
+ overflow: visible;
 }
 
 .wrapper-icons-title {
+ width: 100%;
  z-index: 10;
+ position: relative;
  align-items: start;
+ margin-bottom: 10px;
+}
+
+.wrapper-icons-title .padding-marquee p {
+ line-height: 13px; 
+}
+
+#deskripsi-penemu {
+ min-height: 93px;
+ max-height: 90px;
+}
+
+.nama-penemu, .nama-dinosaurus {
+ bottom: -125px;
+ width: 150px;
+ left: -145px;
+ height: 45px;
+ display: flex;
+ font-size: 16px;
+ font-weight: 700;
+ text-align: center;
+ position: absolute;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Ephesis', serif;
+}
+
+.nama-dinosaurus {
+ left: 95%;
+ bottom: -150px;
+ font-size: 18px;
 }
 
 .container-cards-detail {
- overflow: hidden;
- height: 100vh;
  width: 100%;
+ height: auto;
  position: relative;
- //border: 3px solid blue;
-}
-
-.wrapper-cards-detail {
- height: 500px;
+ //border: 3px solid red;
 }
 
 .higlight-title {
@@ -79,21 +111,38 @@
  padding: 3px 8px 3px 8px;
 }
 
+.padding-marquee {
+ padding: 0 0 5px 0;
+ overflow-y: scroll;
+ position: relative;
+}
+
 .higlight-title-box {
  width: 60%;
  left: 0;
  border: 2px solid;
  padding: 3px 10px;
  position: relative;
- border-radius: 10px;
+ border-radius: 7px;
  justify-content: start;
  background-color: $primary-cards;
 }
 
+.higlight-title-box#detail p {
+ font-size: 15px;
+ text-align: center;
+ font-family: "Frijole", serif;
+}
+
 .higlight-title-box#detail {
- width: auto;
- padding: 3px 25px;
+ width: 100%;
+ z-index: 18;
+ border: 2px solid;
+ margin: 0px 0 25px 0;
+ padding: 5px 25px 5px 0;
  border-color: $primary-border;
+ justify-content: space-between;
+ border-image: linear-gradient(45deg, rgb(29,29,29,.1), $primary-border, rgb(29,29,29,.1)) 30;
 }
 
 .higlight-title-box#right {
@@ -104,21 +153,21 @@
 .to-right {
  border-radius: 10px;
  background-clip: border-box;
- border-image: linear-gradient(to right, $primary-border, rgb(29,29,29,.1)) 1;
+ border-image: linear-gradient(to bottom right, $primary-border, rgb(29,29,29,.1)) 1;
 }
 
 .to-left {
  padding-left: 30%;
  border-radius: 10px;
  background-clip: border-box;
- border-image: linear-gradient(to left, $primary-border, rgb(29,29,29, .1)) 1;
+ border-image: linear-gradient(to bottom left, $primary-border, rgb(29,29,29, .1)) 1;
 }
  
 .cards-items {
- position: relative;
- overflow: hidden;
  gap: 7px;
  display: flex;
+ overflow: hidden;
+ position: relative;
  flex-direction: column;
 }
 
@@ -127,8 +176,257 @@
  height: 25px;
 }
 
+.wrapper-icons-cards .image-component {
+ width: 150px;
+ height: 150px;
+}
+
 .section-detail-dinosurus {
- //border: 2px solid blue;
- height: 400px;
- padding: 25px;
+ padding: 25px 0 0 0;
+ //border: 2px solid red;
+}
+
+.species-detail {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+}
+
+.species-detail .wrapper-flex {
+ padding-bottom: 30px;
+}
+
+.species-detail-right .name-dino, .species-detail-left .name-dino  {
+ font-family: "Frijole", serif;
+ font-weight: 800;
+ height: 35px;
+ display: flex;
+ font-size: 16px;
+ text-align: start;
+ line-height: 18px;
+ align-items: start;
+ word-wrap: break-word;
+ text-transform: uppercase;
+}
+
+.text-species {
+ font-size: 12px;
+ font-weight: 800;
+ text-transform: capitalize;
+}
+
+.species-detail-right {
+ width: 60%;
+ display: flex;
+ align-self: start;
+ position: relative;
+ flex-direction: column;
+}
+
+.species-detail-left {
+ width: 40%;
+ display: flex;
+ position: relative;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.wrapper-species-detail {
+ gap: 8px;
+ width: 100%;
+ display: flex;
+ margin-left: 25px;
+ padding-left: 8px;
+ flex-direction: column;
+ border-left: 1px solid $primary-border;
+}
+
+.species-detail-right .wrapper-species-detail {
+ margin: 0;
+ left: -20px;
+ width: 180px;
+ height: 110px;
+ position: relative;
+}
+.species-detail-right .wrapper-species-detail .image-component {
+ position: absolute;
+ z-index: 15;
+ left: -25px;
+ width: 135%;
+ height: 135%;
+ object-fit: contain;
+}
+
+.items-detail {
+ gap: 8px;
+ width: 100%;
+ display: flex;
+ text-align: center;
+ align-items: center;
+ justify-content: start;
+}
+
+.title-detail {
+ display: flex;
+ align-items: start;
+ flex-direction: column;
+ justify-content: start;
+}
+
+.container-predator-species {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.container-predator-species > p {
+ font-family: "Frijole", serif;
+ font-weight: 400;
+ font-size: 13px;
+}
+
+.more-information-detail, .predator-species {
+ gap: 25px;
+ width: 100%;
+ display: flex;
+ overflow-x: scroll;
+ overflow-y: hidden;
+ scrollbar-width: none;
+ border-top: 2px solid;
+ justify-content: start;
+ border-bottom: 2px solid;
+ padding: 8px 15px 10px 15px;
+ scroll-snap-type: x mandatory;
+ border-image: linear-gradient(90deg, rgb(29,29,29,.1), $primary-border, rgb(29,29,29, .1)) 30;
+}
+
+.predator-species {
+ width: 93%;
+ display: flex;
+ min-height: 65px;
+ align-items: center;
+ padding: 5px 15px 5px 15px;
+}
+
+.more-information-detail {
+ gap: 10px 15px;
+ display: grid;
+ align-items: start;
+ justify-content: start;
+ border-bottom: 0px solid;
+ grid-template-columns: repeat(4, 1fr);
+}
+
+.more-information-detail .items-detail:nth-child(7) {
+ width: 65px;
+ grid-column: span 3;
+}
+
+.more-information-detail .items-detail:nth-child(8), .more-information-detail .items-detail:nth-child(1) {
+ font-size: 12px;
+ grid-column: span 4;
+ margin: 10px 0 5px 0;
+}
+
+.more-information-detail .items-detail:nth-child(9), .more-information-detail .items-detail:nth-child(10), .more-information-detail .items-detail:nth-child(11), .more-information-detail .items-detail:nth-child(12)  {
+ grid-column: span 2;
+}
+
+.more-information-detail .items-detail .title-detail {
+ display: flex;
+ text-align: start;
+ align-items: start;
+}
+.more-information-detail .items-detail .title-detail .tiny-small {
+ font-size: 10px;
+}
+
+.predator-species .items-detail  {
+ gap: 3px;
+ width: 80px;
+ position: relative;
+ scroll-snap-align: start;
+}
+
+.predator-species .items-detail .title-detail .text-species {
+ line-height: 10px;
+ font-size: 10px;
+}
+
+.container-component-image {
+ position: relative;
+}
+
+#background-list .component-icons-image {
+ position: relative;
+ height: 65px;
+ width: 65px;
+ overflow: hidden;
+ border-radius: 5px;
+ border: 2px solid $primary-border;
+}
+
+#background-list .component-icons-image .icons-image {
+ position: absolute;
+ inset: 0;
+ width: 100%;
+ height: 100%;
+ padding: 5px;
+ object-fit: cover;
+ background-color: $primary-bg;
+}
+
+.wrapper-column .container-component-image .component-icons-image {
+ position: relative;
+ width: 110px;
+ height: 110px;
+ overflow: hidden;
+}
+
+.items-detail .container-component-image .component-icons-image {
+ position: relative;
+ width: 50px;
+ height: 50px;
+ overflow: hidden;
+ border-radius: 50%;
+ border: 2px solid $primary-border;
+}
+
+.icons-image {
+ left: 0;
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ object-fit: contain;
+}
+
+.description-species {
+ position: relative;
+ padding: 15px 5px;
+}
+
+.description-species .image-component {
+ 
+}
+
+.description-species p {
+ font-size: 12.5px;
+ font-weight: 400;
+}
+
+.description-species h1 {
+ padding: 5px 0;
+ font-size: 20px;
+ border: 2px solid;
+ text-align: center;
+ border-image: linear-gradient(45deg, rgb(29,29,29,.1), $primary-border, rgb(29,29,29,.1)) 5;
+}
+.description-species h2 {
+ font-size: 18px;
+}
+.description-species h3 {
+ font-size: 15px;
 }

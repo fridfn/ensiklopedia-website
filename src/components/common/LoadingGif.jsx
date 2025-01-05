@@ -9,8 +9,14 @@ const LoadingGif = ({ gif }) => {
   const height = loading.height;
   const getImage = loading.image;
   
+  const disableClick = (e) => {e.preventDefault()}
+  
   return (
-    <img src={getImage} className='loading-gif' width={width} height={height}/>
+   <div className='loading-gif'>
+    <img src={getImage} onContextMenu={disableClick} width={width} height={height}/>
+    <br></br>
+    <p className='tiny' style={{ position: 'relative', top: '-20px' }}>Loading</p>
+   </div>
   )
 }
 

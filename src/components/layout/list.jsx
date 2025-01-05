@@ -10,7 +10,8 @@ import withToggleActive from '@/features/utils/withToggleActive';
 import ButtonWithLoading from '@/features/hooks/ButtonWithLoading';
 import ButtonWithIcon from '@/components/common/ButtonWithIcon';
 import checkDuplicateArr from '@/features/hooks/checkDuplicateArr';
-import ComponentPlants from '@/components/ui/ComponentPlants';
+import ComponentImages from '@/components/ui/ComponentImages';
+import ComponentImage from '@/components/ui/ComponentImage';
 
 let arrSpecies = [];
 
@@ -24,11 +25,9 @@ const List = ({ isActive, toggleActive, ...props }) => {
   
   return (
    <div className='list' data-aos='zoom-in' data-aos-delay="500">
-     <ComponentPlants plants='plants4' type="absolute" />
+     <ComponentImages images='plants4' pages='pageList' from='images' type="absolute" />
      <div className="wrapper width-full" id="background-list">
-       <div className="box-image">
-         <img className="icon-image" src={iconDino}/>
-       </div>
+       <ComponentImage image={iconDino} />
        <p className="name-list small">{dinosaurus}</p>
        <div className="cta">
          <ion-icon class="icon big" id="bookmark" name="bookmark"></ion-icon>
@@ -40,16 +39,17 @@ const List = ({ isActive, toggleActive, ...props }) => {
          <p className="description tiny-bold marquee">{deskripsi}</p>
         </div>
       </div>
-      <div className="wrapper-flex" style={{width: '100%'}}>
+      <div className="wrapper-flex" style={{ width: '100%' }}>
         <ButtonWithLoading 
           icon="paw"
           name="PELAJARI" 
           type='gif'
-          event='blur'
+          event='anim'
           timeout='5000'
+          usePlants={true}
           data={noDuplicateArr}
           page={`/home/dinosaurus/details/${species}`}
-         />
+        />
         <div className={`container-popup wrapper-flex ${isActive ? 'active' : ''}`}>
          <ModalPopup lokasi={lokasi}/>
          <button className="buttons" onClick={toggleActive}>

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@/components/ui/IconButton';
+import ButtonWithIcon from '@/components/common/ButtonWithIcon';
 
-const WrappedButton = ({ icons }) => {
+const WrappedButton = ({ array }) => {
   return (
    <>
     <div className="wrapper">
-      {icons.map((name, index) => {
-       return <IconButton key={index} name={name} />
+      {array.map((name, index) => {
+       return <ButtonWithIcon key={index} icon={name} />
       })}
     </div>
    </>
@@ -15,7 +15,7 @@ const WrappedButton = ({ icons }) => {
 }
 
 WrappedButton.propTypes = {
- icons: PropTypes.arrayOf(PropTypes.string).isRequired
+ array: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default WrappedButton;

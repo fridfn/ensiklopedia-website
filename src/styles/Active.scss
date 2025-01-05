@@ -1,6 +1,62 @@
 
+.container-loading .wrapper {
+ transition: all 3s ease-in;
+}
+
 .container-loading .wrapper.blur {
  backdrop-filter: blur(1px);
+}
+
+.container-loading .wrapper.anim {
+ border-color: #00351b;
+ animation: changeBackground .1s linear forwards;
+}
+
+@keyframes changeBackground {
+ from {
+  background-color: transparent;
+ } to {
+  background-color: #02180d;
+ }
+}
+
+.size-small {
+ width: 50px;
+ height: 50px;
+}
+
+.size-medium {
+ width: 80px;
+ height: 80px;
+}
+
+.bushAnimate {
+ animation: animateBush 7s linear alternate infinite;
+}
+
+.skyAnimate {
+ animation: skyAnimate 2s linear alternate infinite;
+}
+
+@keyframes animateBush {
+ 0%, 50% {
+  transform: translateX(25px) translateY(15px);
+ }
+ 0% {
+  transform: translateX(17px) translateY(10px);
+ } 100% {
+  transform: translateX(10px) translateY(10px);
+ }
+}
+@keyframes skyAnimate {
+ 0%, 50% {
+  transform: translateX(10px) translateY(20);
+ }
+ 0% {
+  transform: translateX(17px) translateY(10px);
+ } 100% {
+  transform: translateX(10px) translateY(10px);
+ }
 }
 
 .list.active {

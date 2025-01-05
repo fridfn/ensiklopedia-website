@@ -1,14 +1,17 @@
 import { useNavigate } from 'react-router-dom'
 import ParticlesComponent from '@/features/particles/ParticlesComponent';
 import ButtonWithIcon from '@/components/common/ButtonWithIcon';
+import ComponentImages from '@/components/ui/ComponentImages';
 
 const NotFound = () => {
   const navigate = useNavigate();
   
   return (
    <>
-    <ParticlesComponent icons="⛔" />
+    <ParticlesComponent icons="🌿" />
     <div className="container">
+    <ComponentImages from="images" images="plants2" type="fixed" pages="notFound"/>
+    <ComponentImages from="images" images="plants5" type="fixed" pages="notFound"/>
       <div className="box-notfound">
         <p className="not-found">404</p>
         <div className="wrapper-notfound">

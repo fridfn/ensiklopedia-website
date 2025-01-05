@@ -35,7 +35,7 @@
  top: 0;
  left: 0;
  width: 100%;
- z-index: 20;
+ z-index: 25;
  display: flex;
  padding: 10px 15px;
  align-items: center;
@@ -59,13 +59,14 @@
 
 .wrapper {
  gap: 20px;
+ z-index: 20;
  display: flex;
  align-items: center;
  justify-content: start;
 }
 
 .icon {
- padding: 5px;
+ padding: 6px;
  border-radius: 5px;
  color: $primary-icon;
  transition: all .3s ease-in;
@@ -87,25 +88,6 @@
  border: 2px solid $primary-border;
  background-color: $primary-cards;
  box-shadow: 2px -2px 6px 2px $primary-cards;
-}
-
-.box-image {
- position: relative;
- height: 65px;
- width: 65px;
- overflow: hidden;
- border-radius: 5px;
- border: 2px solid $primary-border;
-}
-
-.icon-image {
- position: absolute;
- inset: 0;
- width: 100%;
- height: 100%;
- padding: 5px;
- object-fit: cover;
- background-color: $primary-bg;
 }
 
 .list .descriptions-box {
@@ -144,7 +126,6 @@
 .button-wrapper {
  gap: 5px;
  width: auto;
- padding: 3px 5px;
  border-radius: 5px;
  transition: .2s linear;
  border: 1.5px solid transparent;
@@ -223,14 +204,6 @@
  background-color: $primary-cards;
  border-top: 2px solid $primary-border;
  border-left: 3px solid $primary-border;
-}
-
-.main-box-icon {
- position: relative;
- width: 110px;
- height: 110px;
- overflow: hidden;
- box-shadow: inset 4px 5px 10px $primary-cards;
 }
 
 .section-items {

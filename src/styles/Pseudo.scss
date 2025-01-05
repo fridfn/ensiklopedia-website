@@ -7,6 +7,21 @@
  position: absolute;
 }
 
+.predator-species .items-detail .container-component-image:before, .predator-species .items-detail .container-component-image:after {
+ z-index: 19;
+ content: '🍀';
+ font-size: 17px;
+ position: absolute;
+}
+.predator-species .items-detail .container-component-image:after {
+ bottom: -2px;
+ left: -8px;
+}
+.predator-species .items-detail .container-component-image:before {
+ top: -2px;
+ right: -9px;
+}
+
 .navbar .wrapper .items:before, .section-items .items .text-info:before {
  left: -5px;
  top: -5px;
@@ -55,6 +70,30 @@
  border-right: 1.5px solid $primary-border;
  border-top: 1.5px solid $primary-border;
  background-color: $primary-cards;
+}
+
+.padding-marquee:before {
+ content: '';
+ width: 220px;
+ height: 2px;
+ right: 0;
+ top: -5px;
+ position: absolute;
+ box-shadow: 2px 8px 20px #00be26;
+}
+
+.predator-species:after, .predator-species:before {
+ left: 2px;
+ z-index: 10;
+ font-size: 30px;
+ content: '\276F';
+ position: absolute;
+ color: $primary-border;
+}
+
+.predator-species:after {
+ right: 5px;
+ transform: rotate(180deg);
 }
 
 ///      HOVER PSEUDO SCSS ELEMENT     ///

@@ -2,6 +2,7 @@ import '@/styles/App.scss';
 import withToggleActive from '@/features/utils/withToggleActive';
 import mainIcon from '@/assets/icon/dinosaurus.png';
 import properties from '@/features/property/metadata.js';
+import ComponentImage from '@/components/ui/ComponentImage';
 
 const Sidebar = ({ isActive, toggleActive }) => {
   const { sidebar } = properties;
@@ -9,7 +10,7 @@ const Sidebar = ({ isActive, toggleActive }) => {
   const sidebarItems = sidebar.name.map((name, index) => {
    return (
     <div className="items" key={index} id="icons-effects">
-     <ion-icon class="icon big sec-color-icon" id="paw" name={sidebar.icon[index]}></ion-icon>
+     <ion-icon class="icon small sec-color-icon" id="paw" name={sidebar.icon[index]}></ion-icon>
      <p className="text-info tiny-bold">{name}</p>
     </div>
    )
@@ -20,9 +21,7 @@ const Sidebar = ({ isActive, toggleActive }) => {
    <div className={`blur-background ${isActive ? 'active' : ''}`}></div>
     <div className={`sidebar center-clm ${isActive ? 'active' : ''}`}>
      <div className="wrapper-column" style={{paddingRight: '25px'}}>
-       <div className="main-box-icon">
-        <img src={mainIcon} className="icon-image" />
-       </div>
+       <ComponentImage image={mainIcon} />
        <p className="text-info big">ENSIKLOPEDIA</p>
        <p className="text-info tiny" style={{textAlign: 'center'}}>Menjelajah Dunia Kuno Bersama Para Dinosaurus!</p>
        <button className='sidebar-btn' onClick={toggleActive} aria-label="Toggle Sidebar"></button>

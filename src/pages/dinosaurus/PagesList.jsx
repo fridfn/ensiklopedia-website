@@ -56,7 +56,7 @@ const PagesList = () => {
            />
            ))}
            
-           <ButtonPagination 
+           <ButtonPagination
              pageNumber={pageNumber} 
              currentPage={currentPage} 
              totalPages={totalPages}

@@ -15,6 +15,7 @@ const fetchDinosaurus = async (setDinosaurus, setIsLoading, setError, timeout) =
     setError(error.message);
   } finally {
    setTimeout(() => {
+    window.scrollTo({ top: 0 });
     setIsLoading(false);
    }, delay);
   }

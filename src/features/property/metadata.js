@@ -1,8 +1,26 @@
-import plants1 from '@/assets/image/plants/plants_1.png';
 import plants2 from '@/assets/image/plants/plants_2.svg';
 import plants3 from '@/assets/image/plants/plants_3.svg';
 import plants4 from '@/assets/image/plants/plants_4.svg';
+import plants5 from '@/assets/image/plants/plants_5.svg';
+import plants6 from '@/assets/image/plants/plants_6.svg';
 import dinoLoading from '@/assets/image/dinosaurus/dino-loading.webp';
+import mapsDinosaurs from '@/assets/image/map-dinosaurus.svg';
+import cloudImage from '@/assets/image/plants/cloud.svg';
+import sunImage from '@/assets/image/plants/sun.svg';
+
+// dinosaurus module
+import tyrannosaurusrex from '@/assets/image/dinosaurus/tyrannosaurusrex.png';
+import triceratops from '@/assets/image/dinosaurus/triceratops.png';
+import velociraptor from '@/assets/image/dinosaurus/velociraptor.png';
+import brachiosaurus from '@/assets/image/dinosaurus/brachiosaurus.png';
+import stegosaurus from '@/assets/image/dinosaurus/stegosaurus.png';
+
+
+// dinosaurus penemu
+import barnumbrown from '@/assets/image/penemu/barnumbrown.png';
+import othnielcharlesmarsh from '@/assets/image/penemu/othnielcharlesmarsh.png';
+import henryfairfieldosborn from '@/assets/image/penemu/henryfairfieldosborn.png';
+import elmersriggs from '@/assets/image/penemu/elmersriggs.png';
 
 
 const properties = {
@@ -48,28 +66,181 @@ const properties = {
    count: 5,
    content: '',
   },
-  plants: {
-   plants1: {
-    image: plants1,
-    position: 'right',
-    gap: [10, 30, 50, 70, 90]
+  pages: {
+   pageDetail: {
+    button: {
+     first: ['earth', 'person', 'settings'],
+     second: ['earth', 'person', 'settings'],
+     third: ['earth', 'person', 'settings'],
+    },
+    image: {
+     plants5: {
+      image: plants5,
+      position: 'right',
+       gap: ['-40', '50', '160', '250'],
+       bottom: ['-110', '-105', '-112', '-106']
+     },
+     plants6: {
+      image: plants6,
+      position: 'left',
+       gap: ['-10', '110', '215'],
+       top: ['0', '0', '0']
+     },
+     maps: {
+      image: mapsDinosaurs,
+      position: 'left',
+      height: '150',
+      width: '150',
+      gap: ['0']
+     },
+     dataDinosaurus: {
+      penemu: {
+       barnumbrown: {
+        image: barnumbrown,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['45']
+       },
+       othnielcharlesmarsh: {
+        image: othnielcharlesmarsh,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['45']
+       },
+       henryfairfieldosborn: {
+        image: henryfairfieldosborn,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['45']
+       },
+       elmersriggs: {
+        image: elmersriggs,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['45']
+       }
+      },
+      dino: {
+       tyrannosaurusrex: {
+        image: tyrannosaurusrex,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['0']
+       },
+       triceratops: {
+        image: triceratops,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['0']
+       },
+       velociraptor: {
+        image: velociraptor,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['-15'],
+       },
+       brachiosaurus: {
+        image: brachiosaurus,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['0']
+       },
+       stegosaurus: {
+        image: stegosaurus,
+        position: 'left',
+        height: '150',
+        width: '150',
+        gap: ['0']
+       }
+      }
+     }
+    },
    },
-   plants2: {
-    image: plants2,
-    position: 'right',
-    gap: ['-30', '70', '120', '180', '270'],
-    top: ['40', '30', '30', '30', '48']
+   pageList: {
+    button: {
+     first: ['earth', 'person', 'settings'],
+     second: ['earth', 'person', 'settings'],
+     third: ['earth', 'person', 'settings'],
+    },
+    images: {
+     plants2: {
+      image: plants2,
+      position: 'right',
+      gap: ['-30', '70', '120', '180', '270'],
+      top: ['40', '30', '30', '30', '30']
+     },
+     plants3: {
+      image: plants3,
+      position: 'left',
+      gap: ['-10'],
+      top: ['-23']
+     },
+     plants4: {
+      image: plants4,
+      position: 'left',
+      gap: ['-40', '290'],
+      top: ['-15', '100']
+     },
+     plants5: {
+      image: plants5,
+      position: 'right',
+      gap: ['-40', '50', '160', '250'],
+      top: ['230', '240', '220', '220']
+     },
+     plants6: {
+      image: plants6,
+      position: 'left',
+      gap: ['-10', '110', '215'],
+      top: ['10', '10', '10']
+     },
+    },
    },
-   plants3: {
-    image: plants3,
-    position: 'right',
-    gap: [10, 30, 50, 70, 90]
+   notFound: {
+    images: {
+     plants2: {
+      image: plants2,
+      position: 'right',
+      gap: ['-30', '70', '120', '180', '270'],
+      top: ['-8', '-9', '-8', '-10', '-10']
+     },
+     plants5: {
+      image: plants5,
+      position: 'left',
+      gap: ['-40', '50', '160', '250'],
+      bottom: ['-22', '-18', '-21', '-23']
+     },
+     plants6: {
+      image: plants6,
+      position: 'left',
+      gap: ['-10', '110', '215'],
+       top: ['10', '10', '10']
+     },
+    },
    },
-   plants4: {
-    image: plants4,
-    position: 'left',
-    gap: ['-40', '290'],
-    top: ['-15', '100']
+  },
+  componentImage: {
+   sun: {
+    image: sunImage,
+    position: 'right',
+    gap: ['50'],
+    top: ['20'],
+    width: '30',
+    height: '30'
+   },
+   cloud: {
+    image: cloudImage,
+    gap: ['-20', '120', '260',],
+    top: ['5', '-15', '-10'],
+    width: '50',
+    height: '75'
    }
   },
   loading: {
@@ -78,9 +249,6 @@ const properties = {
     position: 'left',
     width: '75',
     height: '75'
-   },
-   loading_plants: {
-    image: dinoLoading,
    }
   }
 }

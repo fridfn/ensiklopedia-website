@@ -15,7 +15,7 @@ import DetailPages from '@/pages/dinosaurus/DetailPages';
 function App() {
    if ('serviceWorker' in navigator) {
    window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
       .then((registration) => {
         console.log('Service Worker registered with scope: ', registration.scope);
       })

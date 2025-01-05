@@ -30,7 +30,7 @@ const ParticlesComponent = (icons) => {
            anim: {
             speed: 3,
             enable: false,
-            size_min: 5,
+            size_min: 9,
            },
           },
           opacity: {
