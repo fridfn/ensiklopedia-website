@@ -7,6 +7,7 @@ import dinoLoading from '@/assets/image/dinosaurus/dino-loading.webp';
 import mapsDinosaurs from '@/assets/image/map-dinosaurus.svg';
 import cloudImage from '@/assets/image/plants/cloud.svg';
 import sunImage from '@/assets/image/plants/sun.svg';
+import dinoSad from '@/assets/image/dinosaurus/404dino.webp';
 
 // dinosaurus module
 import tyrannosaurusrex from '@/assets/image/dinosaurus/tyrannosaurusrex.png';
@@ -72,6 +73,10 @@ const properties = {
      first: ['earth', 'person', 'settings'],
      second: ['earth', 'person', 'settings'],
      third: ['earth', 'person', 'settings'],
+    },
+    detail: {
+     icons: ['earth', 'person', 'globe', 'time'],
+     title: ['periode', 'jenis', 'usia', 'habitat'],
     },
     image: {
      plants5: {
@@ -208,21 +213,27 @@ const properties = {
      plants2: {
       image: plants2,
       position: 'right',
-      gap: ['-30', '70', '120', '180', '270'],
-      top: ['-8', '-9', '-8', '-10', '-10']
+       gap: ['-30', '70', '120', '180', '270'],
+       top: ['-8', '-9', '-8', '-10', '-10']
      },
      plants5: {
       image: plants5,
       position: 'left',
-      gap: ['-40', '50', '160', '250'],
-      bottom: ['-22', '-18', '-21', '-23']
+       gap: ['-40', '50', '160', '250'],
+       bottom: ['-22', '-18', '-21', '-23']
      },
      plants6: {
       image: plants6,
       position: 'left',
-      gap: ['-10', '110', '215'],
+       gap: ['-10', '110', '215'],
        top: ['10', '10', '10']
      },
+     dinoSad: {
+      image: dinoSad,
+      position: 'left',
+       gap: ['80'],
+       bottom: ['-83']
+     }
     },
    },
   },

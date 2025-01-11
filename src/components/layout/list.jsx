@@ -44,7 +44,7 @@ const List = ({ isActive, toggleActive, ...props }) => {
           icon="paw"
           name="PELAJARI" 
           type='gif'
-          event='anim'
+          event='blur'
           timeout='5000'
           usePlants={true}
           data={noDuplicateArr}

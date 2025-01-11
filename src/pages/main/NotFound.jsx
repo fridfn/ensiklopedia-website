@@ -20,6 +20,7 @@ const NotFound = () => {
             <p className="tiny" style={{fontSize: '10px'}}>halaman yang kamu cari saat ini tidak tersedia</p>
           </span>
           <ButtonWithIcon icon="arrow-back" name="kembali?" onClick={(() => navigate('/home/dinosaurus/pages/1'))}/>
+          <ComponentImages pages='notFound' from='images' images='dinoSad' type='absolute' />
         </div>
       </div>
     </div>

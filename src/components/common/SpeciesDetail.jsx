@@ -4,9 +4,14 @@ import ComponentImage from '@/components/ui/ComponentImage';
 import ComponentImages from '@/components/ui/ComponentImages';
 import EachUtils from '@/features/utils/EachUtils';
 import trex from '@/assets/image/dinosaurus/tyrannosaurusrex.png';
+import metadata from '@/features/property/metadata';
 
 const SpeciesDetail = (props, id) => {
   const { usia_terpanjang,tinggi, tentang_penemu, teknik_berburu, teknik_pertahanan, predator, periode, penemu, panjang, nama, mangsa, makanan, lokasi_fosil, kecepatan_lari,  hidup, habitat, fosil_ditemukan_di,  deskripsi, ciri_khusus, berat, article } = props.id;
+  
+  const DATA = metadata.pages.pageDetail.detail.icons;
+  const TITLE = metadata.pages.pageDetail.detail.title;
+  const VALUE = [periode, makanan, usia_terpanjang, habitat];
   
   const [cleanHTML, setCleanHTML] = useState([]);
   
@@ -56,10 +61,12 @@ const SpeciesDetail = (props, id) => {
       <div className='species-detail-left'>
         <p className="small name-dino">Infomasi</p>
          <div className='wrapper-species-detail'>
-          <ItemsDetail icons='person' title='periode' value={periode} />
-          <ItemsDetail icons='person' title='Jenis' value={makanan} />
-          <ItemsDetail icons='person' title='usia' value={usia_terpanjang} />
-          <ItemsDetail icons='person' title='habitat' value={habitat} />
+          <EachUtils
+            of={DATA}
+            render={(items, i) => (
+             <ItemsDetail key={i} icons={items} title={TITLE[i]} value={VALUE[i]} />
+            )}
+          />
         </div>
       </div>
       </div>
@@ -83,7 +90,7 @@ const SpeciesDetail = (props, id) => {
          <EachUtils
           of={predator}
           render={(item, index) => (
-          <ItemsDetail key={index} title={item} image={trex}/>
+            <ItemsDetail key={index} title={item} image={trex}/>
           )}
          />
        </div>
